@@ -4,8 +4,13 @@ Je suis née en 1994, en Algérie. Après l'obtention de mon bac en 2012, je me 
 
 ### Formations
 
-- [2016:2018] - Master en Informatique, spécialité Image et Plurimédia. _Université Paris Descartes_
-
+- [2016:2018] - Master en Informatique, spécialité Image et Plurimédia.
+  _Université Paris Descartes_.
+- [2015:2016] - Master 1 en Informatique, spécialité Réseaux et multimédia.
+  _Université B.B.Arréridj_.
+- [2012:2015] - Licence en informatique, Spécialité Traitement d’images.
+  _Université B.B.Arréridj_.
+  
 ```markdown
 Syntax highlighted code block
 
