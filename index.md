@@ -1,15 +1,14 @@
 ### Bio
+***
 
 Je suis née en 1994, en Algérie. Après l'obtention de mon bac en 2012, je me suis inscrit en informatique à l’université de Bordj-Bou-Arreridj (Algérie). L’informatique est un domaine que j'ai toujours admiré depuis mon enfance jusqu’à ce qu’il m’est devenu une passion. Au cours de la préparation de ma licence, je me suis spécialisé en traitement d'images, j'ai pu ainsi acquérir les bases du domaine et aussi réaliser différents projets. Mais comme je voulais approfondir mes connaissances dans le domaine, je me suis déplacé en France pour m’inscrire en Master à l'université René Descartes dans la spécialisation Image et Plurimédia. Et là j'ai pu constaté combien le monde de la recherche et le développement était très vaste. Aussi, Je compte poursuivre cette voie afin de parfaire ma culture dans ce domaine.
 
 ### Formations
+***
 
-- [2016:2018] - Master en Informatique, spécialité Image et Plurimédia.
-  _Université Paris Descartes_.
-- [2015:2016] - Master 1 en Informatique, spécialité Réseaux et multimédia.
-  _Université B.B.Arréridj_.
-- [2012:2015] - Licence en informatique, Spécialité Traitement d’images.
-  _Université B.B.Arréridj_.
+ - [2016:2018]  | Master en Informatique, spécialité Image et Plurimédia.  _Université Paris Descartes_.   
+ - [2015:2016]  | Master 1 en Informatique, spécialité Réseaux et multimédia.  _Université B.B.Arréridj_.   
+ - [2012:2015]  | Licence en informatique, Spécialité Traitement d’images.  _Université B.B.Arréridj_.   
   
 ```markdown
 Syntax highlighted code block
