@@ -1,8 +1,8 @@
-## Bio
+### Bio
 
 Je suis née en 1994, en Algérie. Après l'obtention de mon bac en 2012, je me suis inscrit en informatique à l’université de Bordj-Bou-Arreridj (Algérie). L’informatique est un domaine que j'ai toujours admiré depuis mon enfance jusqu’à ce qu’il m’est devenu une passion. Au cours de la préparation de ma licence, je me suis spécialisé en traitement d'images, j'ai pu ainsi acquérir les bases du domaine et aussi réaliser différents projets. Mais comme je voulais approfondir mes connaissances dans le domaine, je me suis déplacé en France pour m’inscrire en Master à l'université René Descartes dans la spécialisation Image et Plurimédia. Et là j'ai pu constaté combien le monde de la recherche et le développement était très vaste. Aussi, Je compte poursuivre cette voie afin de parfaire ma culture dans ce domaine.
 
-### Markdown
+### Formations
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
