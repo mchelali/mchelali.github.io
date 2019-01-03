@@ -4,7 +4,7 @@ Je suis née en 1994, en Algérie. Après l'obtention de mon bac en 2012, je me 
 
 ### Formations
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- [2016:2018] - Master en Informatique, spécialité Image et Plurimédia. _Université Paris Descartes_
 
 ```markdown
 Syntax highlighted code block
