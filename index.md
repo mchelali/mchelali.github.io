@@ -24,4 +24,4 @@ Je suis née en 1994, en Algérie. Après l'obtention de mon bac en 2012, je me 
 ### Publications
 ***
 
- - Mohamed. C, Camille. K, Nicole. V, Anne. P. Urban land cover analysis from satellite image time series based on temporal stability. JURSE 2019. **__En progression__**
+ - **Mohamed. C**, Camille. K, Nicole. V, Anne. P. Urban land cover analysis from satellite image time series based on temporal stability. Joint Urban Remote Sensing Event (JURSE). 2019. **_En progression_**
