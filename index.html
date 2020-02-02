@@ -10,7 +10,7 @@
     <title>Mohamed Chelali</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
     <link href="css/jumbotron.css" rel="stylesheet">
@@ -139,18 +139,74 @@
       <br>
           <h1 class="display-5" id="research">Research</h1>
             
-            <bibtex src="bib/bib.bib" ></bibtex>
+            
             <textarea id="bibtex_input" style="display:none;">
+                
 
+
+                @inproceedings{chelali1_ICPRAI_2020,
+                    title={From pixels to Random Walk based segments for image time series deep classification},
+                    year={2020},
+                    booktitle={International Conference on Pattern Recognition and Artificial Intelligence -- ICPRAI 2020},
+                    month={May},
+                    address={Zhongshan City, China},
+                    pages={XX--XX},
+                    author={Chelali, M. and Kurtz, C. and Puissant, A. and Vincent, N.}
+                }
+
+                @inproceedings{chelali2_ICPRAI_2020,
+                    title={Spatio-temporal stability analysis in Satellite Image Times Series},
+                    year={2020},
+                    booktitle={International Conference on Pattern Recognition and Artificial Intelligence -- ICPRAI 2020},
+                    month={May},
+                    address={Zhongshan City, China},
+                    pages={XX--XX},
+                    author={Chelali, M. and Kurtz, C. and Puissant, A. and Vincent, N.}
+                }
+
+                @inproceedings{chelali_VISAPP_2020,
+                    title={Image time series classification based on a planar spatio-temporal data representation},
+                    year={2020},
+                    booktitle={International Conference on Computer Vision Theory and Applications -- VISAPP 2020},
+                    month={March},
+                    address={Valletta (Malta)},
+                    pages={XX--XX},
+                    publisher={SCITEPRESS Digital Library},
+                    author={Chelali, M. and Kurtz, C. and Puissant, A. and Vincent, N.}
+                }
+
+                 @inproceedings{apta2020_mchelali,
+                    author="Chelali, M. and Kurtz, C. and Puissant, A. and Vincent, N.",
+                    title="Classification de séries d'images via une représentation spatio-temporelle",
+                    booktitle="Atelier sur l'Apprentissage Profond dans le cadre de la Conférence Extraction et Gestion des Connaissances -- APTA@EGC 2020",
+                    year="2020",
+                    url="https://apta2020.sciencesconf.org/data/APTA_EGC2020_actes.pdf"
+                }
+
+                @inproceedings{mchelali_2019,
+                    author = {Chelali, M. and Kurtz, C. and Puissant, A. and Vincent, N.},
+                    title = {Urban land cover analysis from satellite image time series based on temporal stability},
+                    booktitle = {Joint Urban Remote Sensing Event -- JURSE 2019, pages 1-4, IEEE Geoscience and Remote Sensing Society.},
+                    year = {2019},
+                    pages = {1--4},
+                    url = "https://ieeexplore.ieee.org/abstract/document/8808967"
+                }
+
+                @misc{gdr_maclean2019Renne,
+                    author="Chelali, M.",
+                    title="Analyse de l'occupation des sols à partir de séries temporelles d'images setellitaires basée sur la sabilité temporelle",
+                    booktitle="MACLEAN (Machine Learning for Earth Observation Data)",
+                    year="27-07-2019"
+                }
+
+               
             </textarea>
 
             <div class="bibtex_template timeline-item" id="timeline">
               <div class="article">
                 <div class="if author">
                   <span class="author"></span>
-                  <span class="if url">
-                    <a class="url" style="font-size:10px">(view online)</a>
-                  </span>
+                  
                 </div>
                 <div>
                   <span class="title" style="font-weight: bold; color:black;"></span>
@@ -168,6 +224,9 @@
 								   aria-controls="bib+BIBTEXKEY+" extra="BIBTEXKEY" bibtexjs-css-escape>
 									  [BibTeX]
 									</a>
+                  <span class="if url" >
+                    <a class="url">[URL]</a>
+                  </span>
 							</div>
 							<div class="bibtexVar collapse" id="bib+BIBTEXKEY+" extra="BIBTEXKEY">
 								  <div class="well">
@@ -178,42 +237,43 @@
           </div>
 
             <div class="bibtex_structure">
-<div class="sections bibtextypekey">
-  <div class="section @article">
-    <h3>Refereed Articles</h3>
-    <div class="sort year" extra="DESC number">
-      <div class="templates"></div>
-    </div>
-  </div>
-  <div class="section @book">
-    <h3>Books</h3>
-    <div class="sort year" extra="DESC number">
-      <div class="templates"></div>
-    </div>
-  </div>
-  <div class="section @inproceedings">
-    <h3>Conference and Workshop Papers</h3>
-    <div class="sort year" extra="DESC number">
-      <div class="templates"></div>
-    </div>
-  </div>
-  <div class="section @misc">
-    <h3>Presentation</h3>
-    <div class="sort year" extra="DESC number">
-      <div class="templates"></div>
-    </div>
-  </div>
-  <div class="section @phdthesis|@mastersthesis|@bachelorsthesis|@techreport">
-    <h3>Others</h3>
-    <div class="sort year" extra="DESC number">
-      <div class="templates"></div>
-    </div>
-  </div>
-</div>
-</div>
+              <div class="sections bibtextypekey">
+                <div class="section @article">
+                  <h3>Refereed Articles</h3>
+                  <div class="sort year" extra="DESC number">
+                    <div class="templates"></div>
+                  </div>
+                </div>
+                <div class="section @book">
+                  <h3>Books</h3>
+                  <div class="sort year" extra="DESC number">
+                    <div class="templates"></div>
+                  </div>
+                </div>
+                <div class="section @inproceedings">
+                  <h3>Conference and Workshop Papers</h3>
+                  <div class="sort year" extra="DESC number">
+                    <div class="templates"></div>
+                  </div>
+                </div>
+                <div class="section @misc">
+                  <h3>Presentation</h3>
+                  <div class="sort year" extra="DESC number">
+                    <div class="templates"></div>
+                  </div>
+                </div>
+                <div class="section @phdthesis|@mastersthesis|@bachelorsthesis|@techreport">
+                  <h3>Others</h3>
+                  <div class="sort year" extra="DESC number">
+                    <div class="templates"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-              <div id="bibtex_display"></div>
-      </div>
+
+<div id="bibtex_display"></div>
+</div>
 
 
 <br>
@@ -232,8 +292,7 @@
 
 </div>
 
-
-
+   
     <footer class="container">
     	<hr>
       <p>&copy; Mohamed Chelali 2017-2018</p>
@@ -244,9 +303,23 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <!--script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script-->
-    <script src="js/vendor/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $.ajax({
+            url : "bib/bib.txt",
+            dataType: "text",
+            success : function (data) {
+                //$(".text").html(data);
+                console.log(data);
+            }
+        });
+      });
+
+    </script>
 <script type="text/javascript" src="js/bibtex_js.js"></script>
 
   </body>
