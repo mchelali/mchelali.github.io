@@ -215,7 +215,7 @@
             </div>
 
 
-<div id="bibtex_display" callback="function(bibtex_display)"></div>
+<div id="bibtex_display" callback="function(bibtex_js_draw)"></div>
 </div>
 
 
@@ -257,14 +257,14 @@
             dataType: "text",
             success : function (data) {
                 $("#bibtex_input").html(data);
-                console.log("yes");
-                //console.log(data);
+                //console.log("yes");
+                console.log(data);
             }
         });
       });
 
     </script>
-<script type="text/javascript" src="js/bibtex_js.js"></script>
+    <script type="text/javascript" src="js/bibtex_js.js"></script>
 
   </body>
 </html>
