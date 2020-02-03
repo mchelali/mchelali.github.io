@@ -215,7 +215,7 @@
             </div>
 
 
-<div id="bibtex_display"></div>
+<div id="bibtex_display" callback="function(bibtex_display)"></div>
 </div>
 
 
@@ -257,7 +257,8 @@
             dataType: "text",
             success : function (data) {
                 $("#bibtex_input").html(data);
-                console.log(data);
+                console.log("yes");
+                //console.log(data);
             }
         });
       });
