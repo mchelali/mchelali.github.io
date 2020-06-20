@@ -221,6 +221,8 @@ function BibtexParser() {
             this.entries[this.currentEntry]["BIBTEXTYPE"] = "book chapter";
         } else if (directive == "@INPROCEEDINGS") {
             this.entries[this.currentEntry]["BIBTEXTYPE"] = "conference, workshop";
+        } else if (directive == "@NATIONALROCEEDINGS") {
+            this.entries[this.currentEntry]["BIBTEXTYPE"] = "national";
         } else if (directive == "@ARTICLE") {
             this.entries[this.currentEntry]["BIBTEXTYPE"] = "journal";
         } else if (directive == "@TECHREPORT") {
