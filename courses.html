@@ -10,10 +10,10 @@
     <title>Mohamed Chelali</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
 
     <!-- Custom styles for this template -->
-    <link href="css/jumbotron.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jumbotron.css" >
     <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"-->
 
 
@@ -32,6 +32,7 @@
 
     <div class="container" >
       <br>
+      <center><img src="image/lincoln.png" ></center>
       
       <div>
         <h3>Descritpion</h3><br>
@@ -48,7 +49,7 @@
           <li><a href="Cours/Test_Images.zip">Images de test</a></li>
           <li><a href="Cours/ConfigOpenCV.pdf">Configuration OpenCV</a></li>
           <li><a href="Cours/TD1_21.pdf">TD-TP1</a></li>
-          <li><a href="Cours/TD2_21.pdf">TD-TP1</a></li>
+          <li><a href="Cours/TD2_21.pdf">TD-TP2</a></li>
         </ul>
       </div>
       
@@ -57,6 +58,7 @@
       <div>
         <h3>Bases de OpenCV</h3><br>
 
+        Listes des types de matrices <code class="lang-cpp">cv::Mat</code>  disponibles sur OpenCV<br>
         <table>
           <tr><td></td><td >C1</td><td >C2</td><td >C3</td><td>C4</td></tr>
           <tr><td>CV_8U</td><td>0</td><td>8</td><td >16</td><td>24</td></tr>
@@ -67,36 +69,42 @@
           <tr><td>CV_32F</td><td>5</td><td >13</td><td>21</td><td>29</td></tr>
           <tr><td>CV_64F</td><td>6</td><td >14</td><td>22</td><td>30</td></tr>
         </table>
-
+      </div>
 
         <br>
-
+      <div>
         <h3>Astuces:</h3>
-        <pre><code class="cpp">
-// creation d'une matrice inialiser à zeros
-    Mat::zeros(nb_lignes, nb_cols, TYPE)
-// Acceder à un pixel gris
-    (int) img.at<uchar>(i,j)
-// Acceder à un pixel en couleur de type UINT8. Utilisation du type Vec3b
-    Vec3b intensity = img.at<Vec3b>(i,j)
-    uchar blue = intensity.val[0];
-    uchar green = intensity.val[1];
-    uchar red = intensity.val[2];
+        
+Creation d'une matrice inialiser à zeros de type T où T est un des types présenté précédements. Ce dernier peut être un entier (valeur de la case dans le tableau) ou le FLAG associer au type voulu. Par example: CV_8UC3 ou l'entier 16.
+<pre><code class="lang-cpp">Mat::zeros(nb_lignes, nb_cols, T)</code></pre>
 
-    Vec3f intensity = img.at<Vec3f>(i,j);
-    float blue = intensity.val[0];
-    float green = intensity.val[1];
-    float red = intensity.val[2];
+Acceder à un pixel gris (dans le cas ou l'image est de type CV_8UC1).
+<pre><code class="lang-cpp">(int) img.at&lt;uchar&gt;(i,j)</code></pre>
 
-Remarque: OpenCV lit les image en BGR et non pas en RGB
+Acceder aux values d'un pixel couleur de type CV_8UC3. Utilisation du type Vec3b
+<pre><code class="lang-cpp">Vec3b intensity = img.at&lt;Vec3b&gt;(i,j)
+uchar blue = intensity.val[0];
+uchar green = intensity.val[1];
+uchar red = intensity.val[2];</code></pre>
 
-// Convertir une image couleur en image grise
-    cvtColor(img_source, img_destination, cv::COLOR_BGR2GRAY);
+Acceder aux values d'un pixel couleur de type CV_32FC3. Utilisation du type Vec3f
+<pre>
+<code class="lang-cpp">Vec3f intensity = img.at&lt;Vec3f&gt;(i,j);
+float blue = intensity.val[0];
+float green = intensity.val[1];
+float red = intensity.val[2];  </code></pre>
 
-// Convertir une image de type UINT8 au type FLOAT
-    img_source.convertToimg_destination, CV_32F);
-  </code></pre>        
-      </div>
+Remarque:
+ OpenCV lit les images en BGR et non pas en RGB
+
+
+Convertir une image couleur en image grise
+<pre><code class="lang-cpp">cvtColor(img_source, img_destination, cv::COLOR_BGR2GRAY);</code></pre>
+
+Convertir une image de type UINT8 au type FLOAT
+<pre><code class="lang-cpp">img_source.convertToimg_destination, CV_32F);</code></pre> 
+       
+</div>
       
 
       
@@ -121,13 +129,13 @@ Remarque: OpenCV lit les image en BGR et non pas en RGB
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <!--script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script-->
+      <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
-    <script src="js/vendor/popper.min.js"></script>
+    
     
 
       <!-- include HIGHLIGH_JS  -->
-      <link rel="stylesheet" href="highlight/styles/default.min.css">
-    <script src="highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+      <link rel="stylesheet" href="highlight/prism.css">
+    <script src="highlight/prism.js"></script>
   </body>
 </html>
