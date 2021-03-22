@@ -22,7 +22,7 @@
     <!-- include font awosome package -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-
+    
   </head>
 
   <body>
@@ -32,22 +32,76 @@
 
     <div class="container" >
       <br>
-
-      <b>Descritpion</b>
-      Le traitement d'image numérique est un domaine vaste et intéréssant. 
-      Acctuellement, la quantité de ce type de données a atteint un record incroyable  en vue de la vulgarisation des capteurs optique.  
-      Dans ce cours, l'objectif principal est de faire apprendre les bases du traitement d'images aux étudiants. 
-      Puis, cet apprentissage est utilisé pour réaliser un projet  
-       <br>
+      
+      <div>
+        <h3>Descritpion</h3><br>
+        
+        Le traitement d'image numérique est un domaine vaste et intéréssant. 
+        Acctuellement, la quantité de ce type de données a atteint un record incroyable  en vue de la vulgarisation des capteurs optique.  
+        Dans ce cours, l'objectif principal est de faire apprendre les bases du traitement d'images aux étudiants. 
+        Puis, cet apprentissage est utilisé pour réaliser un projet 
+      </div>
+      
+      <div>
+        <h3>Ressources</h3>
+        <ul>
+          <li><a href="Cours/Test_Images.zip">Images de test</a></li>
+          <li><a href="Cours/ConfigOpenCV.pdf">Configuration OpenCV</a></li>
+          <li><a href="Cours/TD1_21.pdf">TD-TP1</a></li>
+          <li><a href="Cours/TD2_21.pdf">TD-TP1</a></li>
+        </ul>
+      </div>
       
 
-      <b>Ressources</b>
-      <ul>
-        <li><a href="Cours/Test_Images.zip">Images de test</a></li>
-        <li><a href="Cours/ConfigOpenCV.pdf">Configuration OpenCV</a></li>
-        <li><a href="Cours/TD1_21.pdf">TD-TP1</a></li>
-      </ul>
+
+      <div>
+        <h3>Bases de OpenCV</h3><br>
+
+        <table>
+          <tr><td></td><td >C1</td><td >C2</td><td >C3</td><td>C4</td></tr>
+          <tr><td>CV_8U</td><td>0</td><td>8</td><td >16</td><td>24</td></tr>
+          <tr><td>CV_8S</td><td>1</td><td>9</td><td>17</td><td>25</td></tr>
+          <tr><td>CV_16U</td><td>2</td><td >10</td><td>18</td><td>26</td></tr>
+          <tr><td>CV_16S</td><td>3</td><td >11</td><td>19</td><td>27</td></tr>
+          <tr><td>CV_32S</td><td>4</td><td >12</td><td>20</td><td>28</td></tr>
+          <tr><td>CV_32F</td><td>5</td><td >13</td><td>21</td><td>29</td></tr>
+          <tr><td>CV_64F</td><td>6</td><td >14</td><td>22</td><td>30</td></tr>
+        </table>
+
+
+        <br>
+
+        <h3>Astuces:</h3>
+        <pre><code class="cpp">
+// creation d'une matrice inialiser à zeros
+    Mat::zeros(nb_lignes, nb_cols, TYPE)
+// Acceder à un pixel gris
+    (int) img.at<uchar>(i,j)
+// Acceder à un pixel en couleur de type UINT8. Utilisation du type Vec3b
+    Vec3b intensity = img.at<Vec3b>(i,j)
+    uchar blue = intensity.val[0];
+    uchar green = intensity.val[1];
+    uchar red = intensity.val[2];
+
+    Vec3f intensity = img.at<Vec3f>(i,j);
+    float blue = intensity.val[0];
+    float green = intensity.val[1];
+    float red = intensity.val[2];
+
+Remarque: OpenCV lit les image en BGR et non pas en RGB
+
+// Convertir une image couleur en image grise
+    cvtColor(img_source, img_destination, cv::COLOR_BGR2GRAY);
+
+// Convertir une image de type UINT8 au type FLOAT
+    img_source.convertToimg_destination, CV_32F);
+  </code></pre>        
+      </div>
       
+
+      
+
+
        
     </div>
 
@@ -67,8 +121,13 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <!--script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script-->
+      <script src="js/bootstrap.min.js"></script>
     <script src="js/vendor/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    
 
+      <!-- include HIGHLIGH_JS  -->
+      <link rel="stylesheet" href="highlight/styles/default.min.css">
+    <script src="highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
   </body>
 </html>
