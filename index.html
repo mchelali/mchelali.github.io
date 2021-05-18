@@ -48,7 +48,7 @@
       </div>
     </nav-->
 
-    <main role="main" class="inner cover">
+    
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
         <div class="container" id="aboutme">
@@ -69,10 +69,10 @@
 
         </div>
       </div>
-  </main>
+  
 
     <div class="container" id="timeline">
-        <br>
+        
       	<h1 class="display-5" >Timeline</h1>
         <div class="timeline">
           <div class="timeline-item">
@@ -136,13 +136,24 @@
             
             
             <textarea id="bibtex_input" style="display:none;">
+
+@article{chelaliCVIU2020,
+  author    = {Chelali, M. and Kurtz, C. and Puissant, A. and Vincent, N.},
+  title     = {Deep-STaR: Classification of image time series based on spatio-temporal representations},
+  booktitle   = {Computer Vision and Image Understanding -- CVIU 2020},
+  pages     = {XX--XX},
+  doi = {https://doi.org/10.1016/j.cviu.2021.103221},
+  year      = {2020},
+  pdf = {articles/CVIU_MChelali_2020.pdf}
+}
 		    
 @article{chelaliIJPRAI2020,
   author    = {Chelali, M. and Kurtz, C. and Puissant, A. and Vincent, N.},
   title     = {Influence of data representations and deep architectures in image time series classification},
   booktitle   = {International Journal of Pattern Recognition and Artificial Intelligence -- IJPRAI 2020},
   pages     = {XX--XX},
-  year      = {2020}
+  year      = {2020},
+  pdf = {articles/IJPRAI_RandWalk_2020.pdf}
 }
 		    
 @inproceedings{chelali_ICPR_2020,
@@ -151,8 +162,10 @@
   booktitle={International Conference on Pattern Recognition -- ICPR 2020},
   month={Jan},
   address={Milan, Italy (Virtual)},
-  pages={XX--XX},
-  author={Chelali, M. and Kurtz, C. and Puissant, A. and Vincent, N.}
+  pages={5310--5317},
+  author={Chelali, M. and Kurtz, C. and Puissant, A. and Vincent, N.},
+  doi = {https://doi.org/10.1109/ICPR48806.2021.9412892},
+  pdf = {articles/ICPR20.pdf}
 }
 		    
 @inproceedings{chelali1_ICPRAI_2020,
@@ -163,7 +176,8 @@
   address={Zhongshan City, China},
   pages={339--351},
   author={Chelali, M. and Kurtz, C. and Puissant, A. and Vincent, N.},
-  url={https://link.springer.com/chapter/10.1007/978-3-030-59830-3_30}
+  doi={https://doi.org/10.1007/978-3-030-59830-3_30},
+  pdf = {articles/ICPRAI2020_randWalk.pdf}
 }
 
 @inproceedings{chelali2_ICPRAI_2020,
@@ -174,7 +188,8 @@
   address={Zhongshan City, China},
   pages={484--499},
   author={Chelali, M. and Kurtz, C. and Puissant, A. and Vincent, N.},
-  url={https://link.springer.com/chapter/10.1007/978-3-030-59830-3_42}
+  url={https://doi.org/10.1007/978-3-030-59830-3_42},
+  pdf = {articles/ICPRAI2020_TempStab.pdf}
 }
 
 @inproceedings{chelali_VISAPP_2020,
@@ -186,7 +201,8 @@
   pages={276-283},
   publisher={SCITEPRESS Digital Library},
   author={Chelali, M. and Kurtz, C. and Puissant, A. and Vincent, N.},
- url={http://www.scitepress.org/DigitalLibrary/Link.aspx?doi=10.5220/0008949202760283}		    
+  doi={https://doi.org/10.5220/0008949202760283},
+  pdf = {articles/SCITEPRESS_Conference_Latex.pdf}		    
 }
 
 @inproceedings{mchelali_2019,
@@ -195,7 +211,8 @@
   booktitle = {Joint Urban Remote Sensing Event -- JURSE 2019, pages 1-4, IEEE Geoscience and Remote Sensing Society.},
   year = {2019},
   pages = {1--4},
-  url = "https://ieeexplore.ieee.org/abstract/document/8808967"
+  doi = {https://doi.org/10.1109/JURSE.2019.8808967},
+  pdf = {articles/jurse2019.pdf}
 }
 		    
 @NATIONALROCEEDINGS{apta2020_mchelali,
@@ -203,7 +220,7 @@
   title="Classification de séries d'images via une représentation spatio-temporelle",
   booktitle="Atelier sur l'Apprentissage Profond dans le cadre de la Conférence Extraction et Gestion des Connaissances -- APTA@EGC 2020",
   year="2020",
-  url="https://apta2020.sciencesconf.org/data/APTA_EGC2020_actes.pdf"
+  pdf="https://apta2020.sciencesconf.org/data/APTA_EGC2020_actes.pdf"
 }
         
 @NATIONALROCEEDINGS{chelali_RFIA_2020,
@@ -214,7 +231,7 @@
   address={Vannes (France)},
   pages={1-7},
   author={Chelali, M. and Kurtz, C. and Puissant, A. and Vincent, N.},
-  url={https://cap-rfiap2020.sciencesconf.org/data/RFIAP_2020_paper_32.pdf}
+  pdf={https://cap-rfiap2020.sciencesconf.org/data/RFIAP_2020_paper_32.pdf}
 }		    
 
 @misc{gdr_maclean2019Renne,
@@ -244,8 +261,14 @@
                   </span>.
                 </div>
                 <div>
+                  <span class="if doi" >
+                    <a class="doi">[DOI]</a>
+                  </span>
                   <span class="if url" >
                     <a class="url">[URL]</a>
+                  </span>
+                  <span class="if pdf" >
+                    <a class="pdf">[PDF]</a>
                   </span>
                   <a class="bibtexVar" role="button" data-toggle="collapse"
 								   href="#bib+BIBTEXKEY+" aria-expanded="false"
@@ -317,10 +340,10 @@
 <p>
   	I have a teaching assignments during of my Phd research at the <i>UFR Mathématiques et Informatique</i> of <i>Université de Paris</i>
 	<ul>
-    	<li>Introduction to programming (C programming language)</li>
-    	<li>Functionnal programming (CAML)</li>
-    	<li>Imperative programming (C programming language)</li>
-			<li>Introduction to image analysis (C++/JAVA programming language)</li>
+    <li>Introduction to image analysis (C++/JAVA programming language)</li>
+    <li>Introduction to programming (C programming language)</li>
+    <li>Imperative programming (C programming language)</li>
+    <li>Functionnal programming (CAML)</li>	
 	</ul>
 </p>
 
