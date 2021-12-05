@@ -15,14 +15,23 @@ h1 {
 }
 
 p {
-  /*font-family: 'Roboto', sans-serif;
-  font-size: .8rem;*/
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
 }
 
 .container {
   max-width: 1024px;
   width: 90%;
-  margin-: 0 auto;
+  margin: 0 auto;
+}
+
+#avatar{
+  padding-right: 3em;
+}
+
+#aboutme{
+  padding-top: 3em;
+  padding-bottom: 2em;
 }
 
 .timeline-item {
@@ -31,9 +40,11 @@ p {
   color: rgba(0, 0, 0, 0.7);
   border-left: 2px solid rgba(0, 0, 0, 0.3);
 }
+
 .timeline-item p {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
+
 /*.timeline-item::before {
   content: attr(date-is);
   position: absolute;
