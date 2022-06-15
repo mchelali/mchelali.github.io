@@ -26,8 +26,13 @@ p {
 }
 
 #avatar{
-  padding-right: 3em;
+  margin-right: 3em;
+  height: 250px;
+  border-radius: 100%;
+  border: 2px solid rgba(0, 0, 0, 0.7);
 }
+
+
 
 #aboutme{
   padding-top: 3em;
