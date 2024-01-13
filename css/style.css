@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald|Roboto:400,700");
+
 body {
   font-size: 14px;
   height: 100%;
@@ -25,16 +26,16 @@ p {
   margin: 0 auto;
 }
 
-#avatar{
+#avatar {
   margin-right: 3em;
   height: 250px;
-  border-radius: 100%;
-  border: 2px solid rgba(0, 0, 0, 0.7);
+  /* border-radius: 100%;
+  border: 2px solid rgba(0, 0, 0, 0.7); */
 }
 
 
 
-#aboutme{
+#aboutme {
   padding-top: 3em;
   padding-bottom: 2em;
 }
@@ -63,22 +64,23 @@ p {
 }*/
 
 
-.timeline-item .date{
+.timeline-item .date {
   margin-top: -2.1em;
   font-weight: bold;
   font-weight: 700;
   font-size: 1rem;
 }
 
-.timeline-item .article{
+.timeline-item .article {
   margin-top: -2.1em;
   /*font-weight: bold;
   font-weight: 700;*/
   font-size: 1rem;
 }
 
-.timeline-item .date img{
-  width: 48px; float: left;
+.timeline-item .date img {
+  width: 48px;
+  float: left;
 }
 
 .timeline-item::after {
@@ -93,16 +95,17 @@ p {
   border: 2px solid rgba(0, 0, 0, 0.3);
   background: white;
 }
+
 .timeline-item:last-child {
   -o-border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
-     border-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
-     border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
+  border-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
+  border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
 }
 
 .timeline-item:first-child {
   -o-border-image: linear-gradient(to top, rgba(0, 0, 0, 0.3) 90%, transparent) 1 100%;
-     border-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 90%, transparent) 1 100%;
-     border-image: linear-gradient(to top, rgba(0, 0, 0, 0.3) 90%, transparent) 1 100%;
+  border-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 90%, transparent) 1 100%;
+  border-image: linear-gradient(to top, rgba(0, 0, 0, 0.3) 90%, transparent) 1 100%;
 }
 
 footer {
