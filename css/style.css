@@ -28,9 +28,9 @@ p {
 
 #avatar {
   margin-right: 3em;
-  height: 250px;
-  /* border-radius: 100%;
-  border: 2px solid rgba(0, 0, 0, 0.7); */
+  height: 270px;
+  border-radius: 47%;
+  border: 3px solid rgba(85, 84, 90, 1);
 }
 
 
@@ -51,17 +51,17 @@ p {
   font-size: 1.1rem;
 }
 
-/*.timeline-item::before {
+.timeline-item::before {
   content: attr(date-is);
   position: absolute;
   left: 2em;
   font-weight: bold;
   top: 0.5em;
   display: block;
-  /*font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 1rem;
-}*/
+}
 
 
 .timeline-item .date {
