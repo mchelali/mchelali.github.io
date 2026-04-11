@@ -90,28 +90,35 @@
       </div>
     </nav> -->
 
-    <div class="container" id="aboutme">
-      <img src="image/MTC2.png" class="float-left" id="avatar">
-      <!--h1 class="display-5">Mohamed Chelali</h1-->
-      <h1 class="display-5">Who am I?</h1>
-
-      <p class="text-justify"> I am Mohamed Chelali, researcher at the
-        crossroads of computer vision and artificial
-        intelligence.
-        Passionate about technological innovation and solving complex problems.
-        <!-- My research activities focus on Image time series analysis, such as
-        Satellite Image Time Serie (SITS) or videos. -->
+    <div class="container" id="aboutme" style="display: flex; align-items: flex-start; gap: 32px; margin-top: 30px; flex-wrap: wrap;">
+      <div style="flex: 0 0 140px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-width: 120px; gap: 6px; padding-top: 0; padding-bottom: 0;">
+        <img src="image/MTC2.png" id="avatar" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.12); margin-bottom: 4px; margin-top: 0;">
+        <div style="margin-top: 0;">
+          <a href="articles/CV_mohamed_eng.pdf" class="btn btn-outline-primary btn-sm" style="margin-bottom: 2px;">Resume (EN)</a><br>
+          <a href="articles/CV_mohamed.pdf" class="btn btn-outline-secondary btn-sm">CV (FR)</a>
+        </div>
+      </div>
+      <div style="flex: 1 1 320px; min-width: 260px;">
+        <h1 class="display-5" style="margin-top:0;">Mohamed Chelali</h1>
+        <div style="font-size: 1.1rem; color: #444; margin-bottom: 10px;">
+          Researcher in Computer Vision & AI<br>
+          <span style="font-size: 0.98em; color: #666;">Digital Humanities, Video Processing, Remote Sensing</span>
+        </div>
+        <div id="scholar-metrics" class="metrics" style="margin-bottom: 8px;"></div>
+        <div style="max-width: 320px;">
+          <canvas id="citationsChart" height="60"></canvas>
+        </div>
+      </div>
+      <p style="margin-top: 12px; margin-bottom: 8px;">
+        <span style="font-size:1.05em; color:#222; font-weight:500;">About me:</span><br>
+        I am a passionate researcher at the intersection of computer vision and artificial intelligence, with a focus on image
+        time series, video analysis, and digital humanities. My work aims to bridge technology and culture, developing
+        innovative AI solutions for complex visual data.
       </p>
-      <p>
-        <b>Keywords</b> : Digital humanities, Video Processing, Tracking, Violence Detection,
-        Remote sensing, Image Time Series,
-        Computer Vision, Remote Sensing.
-      </p>
-      <p>
-        <a href="articles/CV_mohamed_eng.pdf">Resume</a> in English,
-        <a href="articles/CV_mohamed.pdf">CV</a> in French
-      </p>
-
+      <div style="font-size:0.98em; color:#555; margin-bottom: 4px;">
+        <b>Keywords:</b> Digital humanities, Video Processing, Tracking, Violence Detection, Remote Sensing, Image Time
+        Series, Computer Vision
+      </div>
     </div>
 
     <div class="container" id="timeline">
@@ -256,6 +263,15 @@
       <h1 class="display-5" id="research">Research</h1>
 
       <textarea id="bibtex_input" style="display:none;">
+
+        @article{chelaliOHD2026,
+        author = {Chelali, M. and Gosselet, S.-K. and Cloppet, F. and Kurtz, C. and Bloch, I. and
+        Foliard, D.},
+        doi = {https://doi.org/10.5334/johd.487},
+        booktitle = {Journal of Open Humanities Data},
+        title = {The FORBIN Dataset: A Collection of Historical Photographs With Archival Metadata},
+        year = {2026}
+        }
 
         @phdthesis{mchelali_PHD_2021,
         title={Prise en compte de l'information spatiale et temporelle pour l'analyse
@@ -690,6 +706,63 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/moment-with-locales.js"></script>
     <script type="text/javascript" src="js/bibtex_js.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+      fetch('metrics.json')
+        .then(res => res.json())
+        .then(data => {
+          // 🔢 Calcul citations / an (moyenne)
+          const years = Object.keys(data.citations_per_year);
+          const values = Object.values(data.citations_per_year);
+
+          // 🔥 Metrics clean
+          document.getElementById("scholar-metrics").innerHTML = `
+            <span class="metric-item" style="margin-right: 18px; font-size:1.1em;">
+              <i class="fas fa-chart-line" style="color:#007bff;"></i> h-index <span class="metric-value" style="font-weight:600; color:#007bff;">${data.hindex}</span>
+            </span>
+            <span class="metric-item" style="font-size:1.1em;">
+              <i class="fas fa-quote-right" style="color:#28a745;"></i> Citations <span class="metric-value" style="font-weight:600; color:#28a745;">${data.citations}</span>
+            </span>
+          `;
+
+          // 📊 Mini histogramme (citations)
+          const ctx = document.getElementById('citationsChart').getContext('2d');
+          new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: years,
+              datasets: [{
+                data: values,
+                backgroundColor: '#007bff33',
+                borderColor: '#007bff',
+                borderWidth: 1.5,
+                borderRadius: 5,
+                barPercentage: 0.6,
+                categoryPercentage: 0.7
+              }]
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                legend: { display: false },
+                tooltip: { enabled: true }
+              },
+              layout: { padding: { left: 0, right: 0, top: 0, bottom: 0 } },
+              scales: {
+                x: {
+                  grid: { display: false },
+                  ticks: { font: { size: 10 }, color: '#555' }
+                },
+                y: {
+                  display: false,
+                  beginAtZero: true
+                }
+              }
+            }
+          });
+        });
+    </script>
   </body>
 
 </html>
