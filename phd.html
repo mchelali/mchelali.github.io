@@ -43,6 +43,7 @@
 
 
       <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/profile-rd.css">
 
     <!-- include font awosome package -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -52,26 +53,40 @@
   </head>
 
   <body>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="index2.html">Mohamed Chelali</a>
+        <div class="nav-links">
+          <a href="index2.html#about">About</a>
+          <a href="index2.html#research">Research</a>
+          <a href="index2.html#publications">Publications</a>
+          <a href="index2.html#projects">Projects</a>
+          <a href="index2.html#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
 
-      
-    <div class="container" >
-
-        
-        <center>
-        <h3> 
-            Prise en compte de l'information spatiale et temporelle<br>pour l'analyse de séquences d'images 
-        </h3>
-        <br>
-        <p>
-          Thèse de doctorat en informatique. <br>
-          Soutenue le 26 novembre 2021 au <a href="http://lipade.mi.parisdescartes.fr">LIPADE</a> à l'<a href="https://u-paris.fr/">Université de Paris</a> <br>
-          Dirigée par <a href="https://helios2.mi.parisdescartes.fr/~vincent/siten/">Nicole Vincent</a> et <a href="https://camille-kurtz.com/">Camille Kurtz</a>
-
+    <main class="page phd-page">
+      <section class="phd-hero">
+        <p class="section-kicker">PhD thesis | Computer Vision</p>
+        <h2 class="section-title">
+          Prise en compte de l'information spatiale et temporelle pour l'analyse de séquences d'images
+        </h2>
+        <div class="phd-meta">
+          <span>Doctorat en informatique</span>
+          <span>26 novembre 2021</span>
+          <span>LIPADE, Université de Paris</span>
+        </div>
+        <p class="lead">
+          Thèse dirigée par <a href="https://helios2.mi.parisdescartes.fr/~vincent/siten/">Nicole Vincent</a>
+          et <a href="https://camille-kurtz.com/">Camille Kurtz</a>.
         </p>
-        <h4>
-          <a href="index.html">Mohamed CHELALI</a>
-        </h4>
-      </center>
+        <div class="actions">
+          <a href="articles/manuscrit_doctorat_mchelali1.pdf">Manuscrit</a>
+          <a href="articles/presentation_doctorat.pdf">Présentation</a>
+          <a href="index2.html#publications">Publications</a>
+        </div>
+      </section>
         
         <!--h3>Thèse en informatique, spécialité analyse et traitement d'image</h3-->
 
@@ -85,9 +100,8 @@
             
        
         
-        <hr>
-     
-        <h1 class="display-5">Résumé </h1>
+        <section class="section phd-text-section">
+        <h2>Résumé</h2>
         <p class="text-justify"> 
           L'évolution de la technologie numérique a permis la multiplicité des capteurs d'images avec lesquels des masses de données visuelles sont quotidiennement produites. 
           Dans certains contextes, ces données peuvent prendre la forme de séquences temporelles d'images $2D$ conduisant à des données $3D$ que nous noterons $2D+t$. 
@@ -101,13 +115,15 @@
         Une de ses application concerne les séries temporelles d'images satellitaires et l'autre concerne les vidéos de caméra de surveillance. 
         Les résultats expérimentaux illustrent l’intérêt des méthodes proposées. 
         </p>
+        </section>
         
         
         
         
         
 
-        <h1 class="display-5">Abstract </h1>
+        <section class="section phd-text-section">
+        <h2>Abstract</h2>
         
         <p class="text-justify"> 
           The evolution of digital technology has allowed the multiplicity of image sensors, leading every day to the production of  masses of visual data. 
@@ -122,11 +138,12 @@
           One is related to satellite image time series and the other is related to surveillance camera videos. 
           The experimental results illustrate the interest of the proposed methods. 
         </p>
+        </section>
         
         
-        <h3><a href="index.html#research">Liste des publications</a> </h3> <br>
-        
-        <h3>Manuscrit </h3>
+        <section class="section phd-text-section">
+        <p class="section-kicker">Thesis files</p>
+        <h2>Manuscrit</h2>
         
         <p>
           <a href="articles/manuscrit_doctorat_mchelali1.pdf">Télécharger le manuscrit</a> <br>
@@ -144,18 +161,13 @@
   }
           </code >
         </p>
+        </section>
         
         <br>
        
-    </div>
+    </main>
 
-
-    
-
-
-
-    <footer class="container">
-      <hr>
+    <footer class="footer">
       <p>Mohamed Chelali</p>
     </footer>
 

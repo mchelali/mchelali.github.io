@@ -1,768 +1,576 @@
 <!doctype html>
 <html lang="en">
-
   <head>
     <meta charset="utf-8">
-    <meta name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content>
-    <meta name="author" content>
-    <link rel="icon" href="image/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mohamed Chelali, researcher in computer vision, artificial intelligence, digital humanities, video processing and remote sensing.">
+    <meta name="keywords" content="Mohamed Chelali, computer vision, artificial intelligence, digital humanities, image time series, video processing, remote sensing, CNRS">
+    <meta name="author" content="Mohamed Chelali">
+    <meta name="robots" content="index,follow">
 
-    <meta name="description"
-      content="Prise en compte de l'information spatiale et temporelle pour l'analyse de séquences d'images" />
-    <meta name="keywords"
-      content="Mohamed CHELALI, neural networks, Ph.D., computer vision, artificial intelligence, image time series, séquences d'images, features extraction" />
-    <meta name="robots" content="index,follow" />
-    <meta name="author" content="Mohamed CHELALI" />
-    <meta name="publisher" content="Mohamed CHELALI" />
+    <meta property="og:title" content="Mohamed Chelali | Computer Vision and AI">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://mchelali.github.io/">
+    <meta property="og:image" content="https://mchelali.github.io/image/icon.png">
+    <meta property="og:site_name" content="mchelali.github.io">
+    <meta property="og:description" content="Research profile in computer vision, AI, digital humanities and image time series analysis.">
 
-    <meta property="og:title"
-      content="Mohamed CHELALI, neural networks, Ph.D., computer vision, artificial intelligence, image time series, séquences d'images, features extraction" />
-    <meta property="og:type" content="blog" />
-    <meta property="og:url" content="image/icon.png" />
-    <meta property="og:image" content="image/icon.png" />
-    <meta property="og:site_name" content="mchelali.github.io" />
-    <meta property="og:description"
-      content="Prise en compte de l'information spatiale et temporelle pour l'analyse de séquences d'images" />
-
-    <meta name="twitter:image" content="image/icon.png">
-    <meta name="twitter:image:alt"
-      content="Ph.D. in image time series analysis of Mohamed CHELALI">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title"
-      content="Ph.D. in image time series analysis of Mohamed CHELALI">
-    <meta name="twitter:description"
-      content="Prise en compte de l'information spatiale et temporelle pour l'analyse de séquences d'images">
+    <meta name="twitter:title" content="Mohamed Chelali | Computer Vision and AI">
+    <meta name="twitter:description" content="Research profile in computer vision, AI, digital humanities and image time series analysis.">
+    <meta name="twitter:image" content="https://mchelali.github.io/image/icon.png">
+    <meta name="twitter:creator" content="@MedChelali">
 
-    <meta name="twitter:domain" content="mchelali.github.io" />
-    <meta name="twitter:url" content="image/icon.png" />
-    <meta name="twitter:site" content="@MedChelali" />
-    <meta name="twitter:creator" content="@MedChelali" />
-
-    <title>Mohamed Chelali</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous">
-
-    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"-->
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- include font awosome package -->
-    <link rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous">
-
+    <title>Mohamed Chelali | Computer Vision and AI</title>
+    <link rel="icon" href="image/favicon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/profile-rd.css">
   </head>
 
   <body>
-
-    <!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <div class="collapse navbar-collapse container" id="navbarsExampleDefault">
-        <a class="navbar-brand" href="#">Mohamed Chelali</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse"
-          data-target="#navbarsExampleDefault"
-          aria-controls="navbarsExampleDefault" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="#about">Mohamed Chelali</a>
+        <button class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
         </button>
-
-        <ul class="navbar-nav justify-content-end">
-          <li class="nav-item active">
-            <a class="nav-link" href="#aboutme"><i class="fas fa-address-card"></i>
-              About me</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#research"> <i class="fas fa-vial"></i>
-              Research</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#teaching"><i class="fas fa-briefcase"></i>
-              Teaching</a>
-          </li>
-        </ul>
-
-      </div>
-    </nav> -->
-
-    <div class="container" id="aboutme" style="display: flex; align-items: flex-start; gap: 32px; margin-top: 30px; flex-wrap: wrap;">
-      <div style="flex: 0 0 140px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-width: 120px; gap: 6px; padding-top: 0; padding-bottom: 0;">
-        <img src="image/MTC2.png" id="avatar" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.12); margin-bottom: 4px; margin-top: 0;">
-        <div style="margin-top: 0;">
-          <a href="articles/CV_mohamed_eng.pdf" class="btn btn-outline-primary btn-sm" style="margin-bottom: 2px;">Resume (EN)</a><br>
-          <a href="articles/CV_mohamed.pdf" class="btn btn-outline-secondary btn-sm">CV (FR)</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#teaching">Teaching</a>
+          <a href="#contact">Contact</a>
         </div>
-      </div>
-      <div style="flex: 1 1 320px; min-width: 260px;">
-        <h1 class="display-5" style="margin-top:0;">Mohamed Chelali</h1>
-        <div style="font-size: 1.1rem; color: #444; margin-bottom: 10px;">
-          Researcher in Computer Vision & AI<br>
-          <span style="font-size: 0.98em; color: #666;">Digital Humanities, Video Processing, Remote Sensing</span>
-        </div>
-        <div id="scholar-metrics" class="metrics" style="margin-bottom: 8px;"></div>
-        <div style="max-width: 320px;">
-          <canvas id="citationsChart" height="60"></canvas>
-        </div>
-      </div>
-      <p style="margin-top: 12px; margin-bottom: 8px;">
-        <span style="font-size:1.05em; color:#222; font-weight:500;">About me:</span><br>
-        I am a passionate researcher at the intersection of computer vision and artificial intelligence, with a focus on image
-        time series, video analysis, and digital humanities. My work aims to bridge technology and culture, developing
-        innovative AI solutions for complex visual data.
-      </p>
-      <div style="font-size:0.98em; color:#555; margin-bottom: 4px;">
-        <b>Keywords:</b> Digital humanities, Video Processing, Tracking, Violence Detection, Remote Sensing, Image Time
-        Series, Computer Vision
-      </div>
-    </div>
+      </nav>
+    </header>
 
-    <div class="container" id="timeline">
-
-      <h1 class="display-5">Timeline</h1>
-      <div class="timeline">
-        <div class="timeline-item">
-        
-          <div class="date">
-            <img src="image/cnrs.png" class="align-self-start mr-3">
-            [Mai 2025 - now] - CNRS
+    <main class="page">
+      <section class="intro section" id="about">
+        <div class="profile-photo">
+          <div class="profile-image-wrap">
+            <img src="image/MTC3.jpg" alt="Portrait of Mohamed Chelali">
           </div>
-          <h4>Postdoctoral Researcher</h4>
-        
-          <p>
-            Research at the intersection of computer vision, digital humanities and cultural heritage.
-            Development of multimodal artificial intelligence (AI) for large-scale analysis of heritage photographs (late 19th–early
-            20th century) within the Humanum PICTORIA consortium (https://pictoria.hypotheses.org/).
-          </p>
+          <div class="profile-badge">CNRS Postdoctoral Researcher</div>
         </div>
-
-        <div class="timeline-item">
-        
-          <div class="date">
-            <img src="image/datascientest.png" class="align-self-start mr-3">
-            [Aug 2024 - Jan 2025] - Data Scientest
+        <div class="profile-text editor-window">
+          <div class="editor-titlebar">
+            <span>profile.md</span>
           </div>
-          <h4>Machine Learning Engineer</h4>
-        
-          <p>
-            Training in technical skills for automation, deployment, and continuous monitoring of machine learning models in
-            production
-          </p>
-        </div>
-
-        <div class="timeline-item">
-
-          <div class="date">
-            <img src="image/jellysmack.jpeg" class="align-self-start mr-3">
-            [2022-May] - <a href="https://jellysmack.com/">Jellysmack</a>
+          <div class="editor-content">
+            <p class="kicker">Computer Vision | Multimodal AI | Visual Heritage</p>
+            <h2>Mohamed Chelali</h2>
+            <p class="lead">
+              I build computer vision and multimodal AI systems for visual heritage, image time series,
+              and large-scale visual collections.
+            </p>
+            <p>
+              Currently at CNRS, I work on AI methods for historical photographs and archival metadata within
+              the Humanum PICTORIA ecosystem, connecting research prototypes with usable datasets and tools.
+            </p>
+            <div class="expertise-tags" aria-label="Research topics">
+              <span>Multimodal AI</span>
+              <span>Computer Vision</span>
+              <span>Image Time Series</span>
+              <span>Remote Sensing</span>
+              <span>Visual Heritage</span>
+            </div>
+            <div class="actions">
+              <a href="articles/CV_mohamed_eng.pdf" class="green">Download Resume</a>
+              <a href="articles/CV_mohamed.pdf" class="green">Download Resume (FR)</a>
+              <a href="#projects">Selected Projects</a>
+              <a href="#publications">Publications</a>
+              <a href="https://scholar.google.com/citations?user=W9kmhasAAAAJ">Google Scholar</a>
+            </div>
           </div>
-          <h4>AI Applied Scientist</h4>
-          <p class="text-justify">
-            Designed, prototyped and put into production an engine with
-            artificial intelligence to summarize a video. <br>
-
-            Internal consultant for the description of images in sentences, tags
-            and other descriptors.
-          </p>
         </div>
+      </section>
 
-        <div class="timeline-item">
-
-        <div class="date">
-          <img src="image/univParis.png" class="align-self-start mr-3">
-          [2021-2022] - IUT of Université Paris Cité
+      <section class="section" id="research">
+        <p class="section-kicker">Research directions</p>
+        <h2>Research</h2>
+        <div class="simple-grid">
+          <article>
+            <h3>Digital humanities</h3>
+            <p>AI methods for historical photographs, archival metadata and cultural heritage collections.</p>
+          </article>
+          <article>
+            <h3>Spatio-temporal vision</h3>
+            <p>Representations for satellite image time series, video sequences and temporal visual patterns.</p>
+          </article>
+          <article>
+            <h3>Applied AI systems</h3>
+            <p>Research engineering around classification, video summarization, tracking and visual descriptors.</p>
+          </article>
         </div>
-        <h4>Temporary teaching and research associate (ATER)</h4>
+      </section>
 
-        <p>
-          Lecturer in computer science and researcher at LIPADE.
+      <section class="section" id="publications">
+        <p class="section-kicker">Scientific output</p>
+        <h2>Publications</h2>
+        <p class="section-note">
+          This list uses the same BibTeX display approach as the original page.
         </p>
-      </div>
 
+        <div id="bibtex_source" data-src="bib.bib"></div>
 
-        <div class="timeline-item">
-
-          <div class="date">
-            <img src="image/univParis.png" class="align-self-start mr-3">
-            [2018-2021] - Université Paris Cité
-          </div>
-          <h4>PhD in Computer Science</h4>
-          <h5>Thesis title : Image time series analysis involving spatial and
-            temporal information </h5>
-          <p class="text-justify">
-            New constellations of satellites acquire images with a high spatial,
-            spectral and temporal resolution around
-            the world leading to Satellite Image Time Series (SITS).
-            During my thesis, our objective is to analyse the image time serie
-            in order to extract features that enrich
-            the orginal data and perform an application, such as
-            a classification, by maximazing the accuracy<br>
-            Advisors: <a
-              href="https://helios2.mi.parisdescartes.fr/~vincent/siten/">Nicole
-              Vincent</a> et <a
-              href="https://camille-kurtz.com/">Camille Kurtz</a>
-          </p>
-          <p>
-            <a href="phd.html">PhD defense page</a>
-          </p>
-
-        </div>
-
-        <div class="timeline-item">
-
-          <div class="date">
-            <img src="image/logo-PARIS-DESCARTES.jpg"
-              class="align-self-start mr-3">
-            [2016-2018] - Paris Descartes University
-          </div>
-          <h4>Master's degree in Computer Sciences - Image et Plurimedia
-            field</h4>
-
-          <p>
-            The master's was validated with a research internship at the
-            LIPADE.<br>
-            Advisors: Nicole Vincent, Camille Kurtz.
-          </p>
-        </div>
-
-        <div class="timeline-item">
-
-          <div class="date">
-            <img src="image/univbba.png" class="align-self-start mr-3">
-            [2015-2016] - El Bachir El Ibrahimi University
-          </div>
-          <h4>Master 1 in Computer Science - Networking and Multimedia
-            field</h4>
-          <p>
-
-          </p>
-        </div>
-
-        <div class="timeline-item">
-          <div class="date">
-            <img src="image/univbba.png" class="align-self-start mr-3">
-            [2012-2015] - El Bachir El Ibrahimi University
-          </div>
-          <h4>Bachelor's degree in Computer Science - Image Processing
-            field</h4>
-          <p>
-
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="container">
-      <br>
-      <h1 class="display-5" id="research">Research</h1>
-
-      <textarea id="bibtex_input" style="display:none;">
-
-        @article{chelaliOHD2026,
-        author = {Chelali, M. and Gosselet, S.-K. and Cloppet, F. and Kurtz, C. and Bloch, I. and
-        Foliard, D.},
-        doi = {https://doi.org/10.5334/johd.487},
-        booktitle = {Journal of Open Humanities Data},
-        title = {The FORBIN Dataset: A Collection of Historical Photographs With Archival Metadata},
-        year = {2026}
-        }
-
-        @phdthesis{mchelali_PHD_2021,
-        title={Prise en compte de l'information spatiale et temporelle pour l'analyse
-        de séquences d'images},
-        year={2021},
-        month={November},
-        school={Université Paris Cité (LIPADE), Funding: French national grant
-        (2017-2021)},
-        author={Chelali, M.},
-        pdf = {articles/manuscrit_doctorat_mchelali1.pdf}
-        }
-
-        @article{chelaliCVIU2020,
-        author = {Chelali, M. and Kurtz, C. and Puissant, A. and Vincent, N.},
-        title = {Deep-STaR: Classification of image time series based on
-        spatio-temporal representations},
-        booktitle = {Computer Vision and Image Understanding -- CVIU 2020},
-        pages = {XX--XX},
-        doi = {https://doi.org/10.1016/j.cviu.2021.103221},
-        year = {2020},
-        pdf = {articles/CVIU_MChelali_2020.pdf}
-        }
-
-        @article{chelaliIJPRAI2020,
-        author = {Chelali, M. and Kurtz, C. and Puissant, A. and Vincent, N.},
-        title = {Influence of data representations and deep architectures in
-        image time series classification},
-        booktitle = {International Journal of Pattern Recognition and Artificial
-        Intelligence -- IJPRAI 2020},
-        pages = {2160001},
-        year = {2020},
-        pdf = {articles/IJPRAI_RandWalk_2020.pdf},
-        doi={https://www.worldscientific.com/doi/abs/10.1142/S0218001421600016}
-        }
-
-        @inproceedings{chelali_ICIP_2021,
-        title={Violence detection from video under 2D spatio-temporal
-        representations},
-        year={2021},
-        booktitle={IEEE International Conference on Image Processing -- ICIP
-        2021},
-        month={Sep},
-        address={Anchorage, Alaska, USA (Virtual)},
-        pages={2593-2597},
-        author={Chelali, M. and Kurtz, C. and Vincent, N.},
-        doi = {https://ieeexplore.ieee.org/abstract/document/9506142},
-        pdf= {articles/ICIP_Violence_Detection.pdf}
-        }
-
-        @inproceedings{chelali_ICPR_2020,
-        title={Classification of spatially enriched pixel time series with
-        convolutional neural networks},
-        year={2020},
-        booktitle={International Conference on Pattern Recognition -- ICPR
-        2020},
-        month={Jan},
-        address={Milan, Italy (Virtual)},
-        pages={5310--5317},
-        author={Chelali, M. and Kurtz, C. and Puissant, A. and Vincent, N.},
-        doi = {https://doi.org/10.1109/ICPR48806.2021.9412892},
-        pdf = {articles/ICPR20.pdf}
-        }
-
-        @inproceedings{chelali1_ICPRAI_2020,
-        title={From pixels to Random Walk based segments for image time series
-        deep classification},
-        year={2020},
-        booktitle={International Conference on Pattern Recognition and
-        Artificial Intelligence -- ICPRAI 2020},
-        month={May},
-        address={Zhongshan City, China},
-        pages={339--351},
-        author={Chelali, M. and Kurtz, C. and Puissant, A. and Vincent, N.},
-        doi={https://doi.org/10.1007/978-3-030-59830-3_30},
-        pdf = {articles/ICPRAI2020_randWalk.pdf}
-        }
-
-        @inproceedings{chelali2_ICPRAI_2020,
-        title={Spatio-temporal stability analysis in Satellite Image Times
-        Series},
-        year={2020},
-        booktitle={International Conference on Pattern Recognition and
-        Artificial Intelligence -- ICPRAI 2020},
-        month={May},
-        address={Zhongshan City, China},
-        pages={484--499},
-        author={Chelali, M. and Kurtz, C. and Puissant, A. and Vincent, N.},
-        doi={https://doi.org/10.1007/978-3-030-59830-3_42},
-        pdf = {articles/ICPRAI2020_TempStab.pdf}
-        }
-
-        @inproceedings{chelali_VISAPP_2020,
-        title={Image time series classification based on a planar
-        spatio-temporal data representation},
-        year={2020},
-        booktitle={International Conference on Computer Vision Theory and
-        Applications -- VISAPP 2020},
-        month={February},
-        address={Valletta (Malta)},
-        pages={276-283},
-        publisher={SCITEPRESS Digital Library},
-        author={Chelali, M. and Kurtz, C. and Puissant, A. and Vincent, N.},
-        doi={https://doi.org/10.5220/0008949202760283},
-        pdf = {articles/SCITEPRESS_Conference_Latex.pdf}
-        }
-
-        @inproceedings{mchelali_2019,
-        author = {Chelali, M. and Kurtz, C. and Puissant, A. and Vincent, N.},
-        title = {Urban land cover analysis from satellite image time series
-        based on temporal stability},
-        booktitle = {Joint Urban Remote Sensing Event -- JURSE 2019, pages 1-4,
-        IEEE Geoscience and Remote Sensing Society.},
-        year = {2019},
-        pages = {1--4},
-        doi = {https://doi.org/10.1109/JURSE.2019.8808967},
-        pdf = {articles/jurse2019.pdf}
-        }
-
-        @NATIONALROCEEDINGS{apta2020_mchelali,
-        author="Chelali, M. and Kurtz, C. and Puissant, A. and Vincent, N.",
-        title="Classification de séries d'images via une représentation spatio-temporelle",
-        booktitle="Atelier sur l'Apprentissage Profond dans le cadre de la Conférence Extraction et Gestion des Connaissances -- APTA@EGC 2020",
-        year="2020",
-        pdf="https://apta2020.sciencesconf.org/data/APTA_EGC2020_actes.pdf"
-        }
-
-        @NATIONALROCEEDINGS{chelali_RFIA_2020,
-        title={Des pixels aux segments pour la classification de séries
-        temporelles d'images via des réseaux de neurones convolutionnels},
-        year={2020},
-        booktitle={Proceedings of the Congrès Reconnaissance des Formes, Image,
-        Apprentissage et Perception -- RFIAP 2020},
-        month={July},
-        address={Vannes (France)},
-        pages={1-7},
-        author={Chelali, M. and Kurtz, C. and Puissant, A. and Vincent, N.},
-        pdf={https://cap-rfiap2020.sciencesconf.org/data/RFIAP_2020_paper_32.pdf}
-        }
-
-        @misc{gdr_maclean2019Renne,
-        author="Chelali, M.",
-        title="Analyse de l'occupation des sols à partir de séries temporelles d'images setellitaires basée sur la sabilité temporelle",
-        booktitle="MACLEAN (Machine Learning for Earth Observation Data)",
-        year="27-07-2019"
-        }
-
-      </textarea>
-
-      <div class="bibtex_template timeline-item" id="timeline">
-        <div class="article">
-          <div class="if author">
-            <span class="author"></span>
-
-          </div>
-          <div>
-            <span class="title" style="font-weight: bold; color:black;"></span>
-          </div>
-          <div style=" margin-bottom:5px;">
-            <span class="if booktitle">
-              <span class="booktitle"></span>,
-            </span>
-            <span class="if year">
-              <span class="year"></span>.
-            </span>
-          </div>
-          <div>
-            <span class="if pdf">
-              <a class="pdf">[PDF]</a>
-            </span>
-            <a class="bibtexVar" role="button" data-toggle="collapse"
-              href="#bib+BIBTEXKEY+" aria-expanded="false"
-              aria-controls="bib+BIBTEXKEY+" extra="BIBTEXKEY"
-              bibtexjs-css-escape>
-              [BibTeX]
-            </a>
-            <span class="if doi">
-              <a class="doi">[DOI]</a>
-            </span>
-            <span class="if url">
-              <a class="url">[URL]</a>
-            </span>
-
-          </div>
-          <div class="bibtexVar collapse" id="bib+BIBTEXKEY+" extra="BIBTEXKEY">
-            <div class="well">
+        <div class="bibtex_template publication-template">
+          <div class="publication-entry">
+            <div class="if author publication-authors">
+              <span class="author"></span>
+            </div>
+            <div class="publication-title">
+              <span class="title"></span>
+            </div>
+            <div class="publication-venue">
+              <span class="if booktitle">
+                <span class="booktitle"></span>,
+              </span>
+              <span class="if school">
+                <span class="school"></span>,
+              </span>
+              <span class="if year">
+                <span class="year"></span>.
+              </span>
+            </div>
+            <div class="publication-links">
+              <span class="if pdf">
+                <a class="pdf">[PDF]</a>
+              </span>
+              <a class="bibtexVar" role="button" data-toggle="collapse" href="#bib+BIBTEXKEY+" aria-expanded="false" aria-controls="bib+BIBTEXKEY+" extra="BIBTEXKEY" bibtexjs-css-escape>
+                [BibTeX]
+              </a>
+              <span class="if doi">
+                <a class="doi">[DOI]</a>
+              </span>
+              <span class="if url">
+                <a class="url">[URL]</a>
+              </span>
+            </div>
+            <div class="bibtexVar collapse" id="bib+BIBTEXKEY+" extra="BIBTEXKEY">
               <pre><span class="bibtexraw noread"></span></pre>
             </div>
           </div>
-
         </div>
 
-      </div>
-
-      <div class="bibtex_structure">
-        <div class="sections bibtextypekey">
-          <div class="section @article">
-            <h3>Journals</h3>
-            <div class="sort year" extra="DESC number">
-              <div class="templates"></div>
-            </div>
-          </div>
-          <div class="section @book">
-            <h3>Books</h3>
-            <div class="sort year" extra="DESC number">
-              <div class="templates"></div>
-            </div>
-          </div>
-          <div class="section @inproceedings">
-            <h3>Conference and Workshop Papers</h3>
-            <div class="sort year" extra="DESC number">
-              <div class="templates"></div>
-            </div>
-          </div>
-          <div class="section @NATIONALROCEEDINGS">
-            <h3>National conference and Workshop Papers</h3>
-            <div class="sort year" extra="DESC number">
-              <div class="templates"></div>
-            </div>
-          </div>
-          <div class="section @misc">
-            <h3>Presentation</h3>
-            <div class="sort year" extra="DESC number">
-              <div class="templates"></div>
-            </div>
-          </div>
-          <div
-            class="section @phdthesis|@mastersthesis|@bachelorsthesis|@techreport">
-            <h3>Thesis</h3>
-            <div class="sort year" extra="DESC number">
-              <div class="templates"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="bibtex_display"></div>
-    </div>
-
-    <br>
-    <div class="container" id="projects">
-      <h1 class="display-5">Projects</h1>
-
-      <div class="card mb-3">
-        <h5 class="card-header">Forbin Dataset</h5>
-        <div class="card-body">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="https://mchelali.github.io/forbin_dataset/forbin_recolorized.png" class="img-fluid rounded-start" alt="..." width="200px">
-            </div>
-            <div class="col-md-8">
-              <p class="card-text">
-                Forbin dataset is a collection of digitized photographs of the French journalist Victor Forbin, taken between 1890 and 1910. 
-                The dataset is composed of 62,135 photographs. Each print underwent digitization on both the front and back sides. 
-              </p>
-              <br>
-              <a href="https://mchelali.github.io/forbin_dataset/">A subset can be explored here </a>
-              or can be downloaded from <a href="https://huggingface.co/datasets/mchelali/forbin_dataset">Hugging Face</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-3">
-        <h5 class="card-header">Image colorization</h5>
-        <div class="card-body">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="image/Automatic-Colorization.png" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <p class="card-text">
-                Photographic colorization is the process of adding color to black-and-white photos, using modern Machine Learning models
-                based on neural networks. Applications include art, historical restoration, and personal projects. This project, part of
-                the MLOps curriculum at Datascientest, offers an AI-powered photo colorization service.
-              </p>
-              <br>
-              <a href="https://github.com/mchelali/picopix">Image colorization</a> code available on github
-            </div>
-          </div>
-        </div>
-      </div>
-
-      
-      <div class="card mb-3">
-        <h5 class="card-header">AI Helpers</h5>
-        <div class="card-body">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="https://harchaoui.org/warith/ai-helpers/anim.apng" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <p class="card-text">
-                AI Helpers is a BSD-licensed Python library suite that simplifies AI development by automating tasks in machine
-                learning, media processing, and secure file management, boosting productivity and enabling scalable solutions.
-              </p>
-              <br>
-              <ul>
-                <li><a href="https://harchaoui.org/warith/ai-helpers/">Documentation</a></li>
-                <li><a href="https://github.com/warith-harchaoui/os-helper">OS Helper</a></li>
-                <li><a href="https://github.com/warith-harchaoui/audio-helper">Audio Helper</a></li>
-                <li><a href="https://github.com/warith-harchaoui/video-helper">Video Helper</a></li>
-                <li><a href="https://github.com/warith-harchaoui/yt-helper">YT Helper</a></li>
-                <li><a href="https://github.com/warith-harchaoui/sftp-helper">SFTP Helper</a></li>
-
-              </ul>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      
-
-      <div class="card mb-3">
-        <h5 class="card-header">Temporal stability</h5>
-        <div class="card-body">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="image/TemporalStability/RLE.png"
-                class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <p class="card-text">Spatio-temporal hand-crafted features
-                extraction that measure the stabilty. The
-                proposed method is based on a compression algorithm named Run
-                Length Encoding.
-
-              </p>
-              <br>
-              <a href="https://github.com/mchelali/TemporalStability">Temporal
-                stability</a> code available on github
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-3">
-        <h5 class="card-header">Phd Thesis Template</h5>
-        <div class="card-body">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="image/phdTemplate.jpg" class="img-fluid rounded-start" alt="..." style="height: 150px;">
-            </div>
-            <div class="col-md-8">
-              <p class="card-text">
-                This LaTeX template is designed to streamline the creation of a professional and well-structured PhD thesis. It adheres
-                to academic formatting standards while remaining highly customizable to meet the specific requirements of institutions.
-                This template provides predefined environments for chapters, sections, figures, tables, and citations, with additional
-                styling for the title page, table of contents, and appendices.
-              </p>
-              <br>
-              <a href="https://github.com/mchelali/TemplateThesis">Template</a> is available on github<br>
-              <a href="https://www.overleaf.com/latex/templates/phd-thesis-template-u-paris/qnqhskjxnsvh">Template</a> is available on overleaf
-                
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <br>
-    <div class="container" id="teaching">
-      <h1 class="display-5">Teaching</h1>
-
-      <p>
-        I had a teaching assignments during of my Phd research at the <i>UFR
-          Mathématiques et Informatique</i> of
-        <i>Université Paris Cité</i>
-        <ul>
-          <li>Introduction to image analysis (C++/JAVA programming
-            language)</li>
-          <li>Introduction to programming (C programming language)</li>
-          <li>Imperative programming (C programming language)</li>
-          <li>Functionnal programming (CAML)</li>
-        </ul>
-      </p>
-
-      <p>
-        I had a teaching assignments at the IUT of <i>Université Paris Cité</i>
-        <ul>
-          <li>Introduction to programming(C/C++ programming language)</li>
-          <li>Advanced Algorithms (JAVA programming language)</li>
-          <li>oriented object programming (JAVA programming language)</li>
-        </ul>
-      </p>
-
-      <h1 class="display-5">Tutorials</h1>
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="card">
-            <a
-              href="https://mchelali.github.io/ImageClassificationWithDeepLearning/Image%20Classification.html"
-              class="btn">
-              <div class="card-body">
-                <h5 class="card-title">
-                  Image classification using deep neural networks
-                </h5>
-                <p class="card-text">
-                  Discover how to classify images step by step using deep neural
-                  networks in a beginner-friendly tutorial.
-                </p>
-
+        <div class="bibtex_structure publications-structure">
+          <div class="sections bibtextypekey">
+            <div class="section @article">
+              <h3>Journals</h3>
+              <div class="sort year" extra="DESC number">
+                <div class="templates"></div>
               </div>
-
-            </a>
+            </div>
+            <div class="section @inproceedings">
+              <h3>Conference and Workshop Papers</h3>
+              <div class="sort year" extra="DESC number">
+                <div class="templates"></div>
+              </div>
+            </div>
+            <div class="section @nationalroceedings">
+              <h3>National Conference and Workshop Papers</h3>
+              <div class="sort year" extra="DESC number">
+                <div class="templates"></div>
+              </div>
+            </div>
+            <div class="section @misc">
+              <h3>Presentations</h3>
+              <div class="sort year" extra="DESC number">
+                <div class="templates"></div>
+              </div>
+            </div>
+            <div class="section @phdthesis|@mastersthesis|@bachelorsthesis|@techreport">
+              <h3>Thesis</h3>
+              <div class="sort year" extra="DESC number">
+                <div class="templates"></div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <footer class="container">
-      <hr>
-      <p>
-        Mohamed Chelali | mohamed.t.chelali[at]gmail.fr |
-        <a href="https://www.researchgate.net/profile/Mohamed_Chelali">
-          <i class='fab fa-researchgate' style='font-size:25px'></i>
-        </a>
-        <a href="https://github.com/mchelali">
-          <i class="fab fa-github" style='font-size:25px'></i>
-        </a>
-      </p>
+        <div id="bibtex_display"></div>
+      </section>
+
+      <section class="section" id="projects">
+        <p class="section-kicker">Research engineering</p>
+        <h2>Projects</h2>
+        <div class="project-list">
+          <article>
+            <img src="https://mchelali.github.io/forbin_dataset/forbin_recolorized.png" alt="FORBIN dataset examples">
+            <div>
+              <h3>FORBIN Dataset</h3>
+              <p>
+                A collection of 62,135 digitized photographs of Victor Forbin, designed for historical image analysis
+                and archival metadata research.
+              </p>
+              <p>
+                <a href="https://mchelali.github.io/forbin_dataset/">Explore</a> |
+                <a href="https://huggingface.co/datasets/mchelali/forbin_dataset">Hugging Face</a>
+              </p>
+            </div>
+          </article>
+          <article>
+            <img src="image/Automatic-Colorization.png" alt="Image colorization project">
+            <div>
+              <h3>Image Colorization</h3>
+              <p>
+                Photographic colorization service using modern machine learning models based on neural networks.
+                The project was developed during the DataScientest MLOps curriculum.
+              </p>
+              <p><a href="https://github.com/mchelali/picopix">GitHub repository</a></p>
+            </div>
+          </article>
+          <article>
+            <img src="https://harchaoui.org/warith/ai-helpers/anim.apng" alt="AI Helpers project animation">
+            <div>
+              <h3>AI Helpers</h3>
+              <p>
+                A BSD-licensed Python library suite that simplifies AI development by automating tasks in machine
+                learning, media processing and secure file management.
+              </p>
+              <p class="project-links">
+                <a href="https://harchaoui.org/warith/ai-helpers/">Documentation</a> |
+                <a href="https://github.com/warith-harchaoui/os-helper">OS Helper</a> |
+                <a href="https://github.com/warith-harchaoui/audio-helper">Audio Helper</a> |
+                <a href="https://github.com/warith-harchaoui/video-helper">Video Helper</a> |
+                <a href="https://github.com/warith-harchaoui/yt-helper">YT Helper</a> |
+                <a href="https://github.com/warith-harchaoui/sftp-helper">SFTP Helper</a>
+              </p>
+            </div>
+          </article>
+          <article>
+            <img src="image/TemporalStability/RLE.png" alt="Temporal stability project">
+            <div>
+              <h3>Temporal Stability</h3>
+              <p>
+                Spatio-temporal hand-crafted feature extraction for satellite image time series.
+                The proposed method measures stability using a compression algorithm named Run Length Encoding.
+              </p>
+              <p><a href="https://github.com/mchelali/TemporalStability">GitHub repository</a></p>
+            </div>
+          </article>
+          <article>
+            <img src="image/phdTemplate.jpg" alt="PhD thesis template preview">
+            <div>
+              <h3>PhD Thesis Template</h3>
+              <p>
+                A professional LaTeX template for writing a structured PhD thesis, with predefined environments
+                for chapters, sections, figures, tables, citations, appendices and front matter.
+              </p>
+              <p>
+                <a href="https://github.com/mchelali/TemplateThesis">GitHub repository</a> |
+                <a href="https://www.overleaf.com/latex/templates/phd-thesis-template-u-paris/qnqhskjxnsvh">Overleaf template</a>
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <p class="section-kicker">Academic and applied path</p>
+        <h2>Experience</h2>
+        <div class="timeline">
+          <article>
+            <img src="image/cnrs.png" alt="CNRS logo">
+            <div>
+              <time>May 2025 - present</time>
+              <h3>Postdoctoral Researcher, CNRS</h3>
+              <p>Multimodal AI for large-scale analysis of heritage photographs within the Humanum PICTORIA consortium.</p>
+            </div>
+          </article>
+          <article>
+            <img src="image/datascientest.png" alt="DataScientest logo">
+            <div>
+              <time>Aug 2024 - Jan 2025</time>
+              <h3>Machine Learning Engineer, DataScientest</h3>
+              <p>Training in automation, deployment and continuous monitoring of machine learning models in production.</p>
+            </div>
+          </article>
+          <article>
+            <img src="image/jellysmack.jpeg" alt="Jellysmack logo">
+            <div>
+              <time>2022 - 2024</time>
+              <h3>AI Applied Scientist, Jellysmack</h3>
+              <p>Video summarization, image captioning, tagging and visual descriptors.</p>
+            </div>
+          </article>
+          <article>
+            <img src="image/univParis.png" alt="Universite Paris Cite logo">
+            <div>
+              <time>2021 - 2022</time>
+              <h3>Temporary Teaching and Research Associate (ATER), Universite Paris Cite</h3>
+              <p>Lecturer in computer science and researcher at LIPADE.</p>
+            </div>
+          </article>
+          <article>
+            <img src="image/univParis.png" alt="Universite Paris Cite logo">
+            <div>
+              <time>2018 - 2021</time>
+              <h3><a href="phd.html">PhD in Computer Science, Universite Paris Cite</a></h3>
+              <p>Image time series analysis involving spatial and temporal information.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="teaching">
+        <p class="section-kicker">Courses and tutorials</p>
+        <h2>Teaching</h2>
+        <ul>
+          <li>Introduction to image analysis with C++ and Java.</li>
+          <li>Introduction to programming and imperative programming with C.</li>
+          <li>Functional programming with CAML.</li>
+          <li>Advanced algorithms and object-oriented programming with Java.</li>
+        </ul>
+        <p>
+          Tutorial:
+          <a href="https://mchelali.github.io/ImageClassificationWithDeepLearning/Image%20Classification.html">
+            Image classification using deep neural networks
+          </a>
+        </p>
+      </section>
+
+      <section class="section" id="contact">
+        <p class="section-kicker">Collaborations</p>
+        <h2>Contact</h2>
+        <p>
+          Mohamed Chelali |
+          <a href="mailto:mohamed.t.chelali@gmail.fr">mohamed.t.chelali@gmail.fr</a> |
+          <a href="https://github.com/mchelali">GitHub</a> |
+          <a href="https://www.researchgate.net/profile/Mohamed_Chelali">ResearchGate</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Mohamed Chelali | Computer Vision and AI</p>
     </footer>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/moment-with-locales.js"></script>
-    <script type="text/javascript" src="js/bibtex_js.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
     <script>
-      fetch('metrics.json')
-        .then(res => res.json())
-        .then(data => {
-          // 🔢 Calcul citations / an (moyenne)
-          const years = Object.keys(data.citations_per_year);
-          const values = Object.values(data.citations_per_year);
+      function escapeHtml(value) {
+        return String(value || "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;");
+      }
 
-          // 🔥 Metrics clean
-          document.getElementById("scholar-metrics").innerHTML = `
-            <span class="metric-item" style="margin-right: 18px; font-size:1.1em;">
-              <i class="fas fa-chart-line" style="color:#007bff;"></i> h-index <span class="metric-value" style="font-weight:600; color:#007bff;">${data.hindex}</span>
-            </span>
-            <span class="metric-item" style="font-size:1.1em;">
-              <i class="fas fa-quote-right" style="color:#28a745;"></i> Citations <span class="metric-value" style="font-weight:600; color:#28a745;">${data.citations}</span>
-            </span>
-          `;
+      function normalizeBibValue(value) {
+        return String(value || "")
+          .replace(/\s+/g, " ")
+          .replaceAll("{", "")
+          .replaceAll("}", "")
+          .trim();
+      }
 
-          // 📊 Mini histogramme (citations)
-          const ctx = document.getElementById('citationsChart').getContext('2d');
-          new Chart(ctx, {
-            type: 'bar',
-            data: {
-              labels: years,
-              datasets: [{
-                data: values,
-                backgroundColor: '#007bff33',
-                borderColor: '#007bff',
-                borderWidth: 1.5,
-                borderRadius: 5,
-                barPercentage: 0.6,
-                categoryPercentage: 0.7
-              }]
-            },
-            options: {
-              responsive: true,
-              plugins: {
-                legend: { display: false },
-                tooltip: { enabled: true }
-              },
-              layout: { padding: { left: 0, right: 0, top: 0, bottom: 0 } },
-              scales: {
-                x: {
-                  grid: { display: false },
-                  ticks: { font: { size: 10 }, color: '#555' }
-                },
-                y: {
-                  display: false,
-                  beginAtZero: true
-                }
+      function splitBibEntries(input) {
+        const entries = [];
+        let i = 0;
+
+        while (i < input.length) {
+          const at = input.indexOf("@", i);
+          if (at === -1) break;
+
+          const open = input.indexOf("{", at);
+          if (open === -1) break;
+
+          let depth = 0;
+          let end = open;
+
+          for (; end < input.length; end += 1) {
+            if (input[end] === "{") depth += 1;
+            if (input[end] === "}") depth -= 1;
+            if (depth === 0) {
+              end += 1;
+              break;
+            }
+          }
+
+          entries.push(input.slice(at, end));
+          i = end;
+        }
+
+        return entries;
+      }
+
+      function parseFields(body) {
+        const fields = {};
+        let i = 0;
+
+        while (i < body.length) {
+          while (/[\s,]/.test(body[i] || "")) i += 1;
+
+          const keyStart = i;
+          while (/[A-Za-z0-9_:-]/.test(body[i] || "")) i += 1;
+          const key = body.slice(keyStart, i).toLowerCase();
+
+          while (/\s/.test(body[i] || "")) i += 1;
+          if (!key || body[i] !== "=") {
+            i += 1;
+            continue;
+          }
+
+          i += 1;
+          while (/\s/.test(body[i] || "")) i += 1;
+
+          let value = "";
+          if (body[i] === "{") {
+            let depth = 0;
+            const valueStart = i + 1;
+            for (; i < body.length; i += 1) {
+              if (body[i] === "{") depth += 1;
+              if (body[i] === "}") depth -= 1;
+              if (depth === 0) {
+                value = body.slice(valueStart, i);
+                i += 1;
+                break;
               }
             }
-          });
+          } else if (body[i] === '"') {
+            const valueStart = i + 1;
+            i += 1;
+            while (i < body.length && body[i] !== '"') i += 1;
+            value = body.slice(valueStart, i);
+            i += 1;
+          } else {
+            const valueStart = i;
+            while (i < body.length && body[i] !== ",") i += 1;
+            value = body.slice(valueStart, i);
+          }
+
+          fields[key] = normalizeBibValue(value);
+        }
+
+        return fields;
+      }
+
+      function parseBibtex(input) {
+        return splitBibEntries(input).map((raw) => {
+          const header = raw.match(/^@([^{]+)\{([^,]+),/);
+          if (!header) return null;
+
+          const type = header[1].trim().toLowerCase();
+          const key = header[2].trim();
+          const body = raw.slice(header[0].length, -1);
+
+          return {
+            type,
+            key,
+            raw: raw.trim(),
+            fields: parseFields(body),
+          };
+        }).filter(Boolean);
+      }
+
+      function publicationCategory(type) {
+        if (type === "article") return "Journals";
+        if (type === "inproceedings") return "Conference and Workshop Papers";
+        if (type === "nationalroceedings") return "National Conference and Workshop Papers";
+        if (type === "misc") return "Presentations";
+        if (["phdthesis", "mastersthesis", "bachelorsthesis", "techreport"].includes(type)) return "Thesis";
+        return "Other";
+      }
+
+      function renderPublicationEntries(bibtex) {
+        const target = document.getElementById("bibtex_display");
+        if (!target) return;
+
+        const entries = parseBibtex(bibtex).sort((a, b) => {
+          const yearA = parseInt(a.fields.year, 10) || 0;
+          const yearB = parseInt(b.fields.year, 10) || 0;
+          return yearB - yearA;
         });
+
+        const groups = new Map();
+        entries.forEach((entry) => {
+          const category = publicationCategory(entry.type);
+          if (!groups.has(category)) groups.set(category, []);
+          groups.get(category).push(entry);
+        });
+
+        const order = [
+          "Journals",
+          "Conference and Workshop Papers",
+          "National Conference and Workshop Papers",
+          "Presentations",
+          "Thesis",
+          "Other",
+        ];
+
+        target.innerHTML = order
+          .filter((category) => groups.has(category))
+          .map((category) => `
+            <div class="publication-group">
+              <h3>${escapeHtml(category)}</h3>
+              ${groups.get(category).map((entry) => {
+                const fields = entry.fields;
+                const venue = fields.booktitle || fields.school || "";
+                const links = [
+                  fields.pdf ? `<a href="${escapeHtml(fields.pdf)}">[PDF]</a>` : "",
+                  fields.doi ? `<a href="${escapeHtml(fields.doi)}">[DOI]</a>` : "",
+                  fields.url ? `<a href="${escapeHtml(fields.url)}">[URL]</a>` : "",
+                ].filter(Boolean).join(" ");
+
+                return `
+                  <article class="publication-entry">
+                    <div class="publication-authors">${escapeHtml(fields.author)}</div>
+                    <div class="publication-title">${escapeHtml(fields.title)}</div>
+                    <div class="publication-venue">
+                      ${escapeHtml(venue)}${venue && fields.year ? "," : ""} ${escapeHtml(fields.year)}
+                    </div>
+                    <div class="publication-links">
+                      ${links}
+                      <details>
+                        <summary>[BibTeX]</summary>
+                        <pre>${escapeHtml(entry.raw)}</pre>
+                      </details>
+                    </div>
+                  </article>
+                `;
+              }).join("")}
+            </div>
+          `).join("");
+      }
+
+      function renderPublications() {
+        const source = document.getElementById("bibtex_source");
+        const target = document.getElementById("bibtex_display");
+        if (!source || !target) return;
+
+        const src = source.dataset.src || "bib.bib";
+        target.innerHTML = `<p class="section-note">Loading publications from ${escapeHtml(src)}...</p>`;
+
+        fetch(src)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`Cannot load ${src}`);
+            }
+            return response.text();
+          })
+          .then(renderPublicationEntries)
+          .catch(() => {
+            target.innerHTML = `
+              <p class="publication-error">
+                Publications could not be loaded from <code>${escapeHtml(src)}</code>.
+                Please open this page through a local server or GitHub Pages.
+              </p>
+            `;
+          });
+      }
+
+      document.addEventListener("DOMContentLoaded", renderPublications);
+
+      const menuButton = document.querySelector(".menu-button");
+      const navLinks = document.querySelector(".nav-links");
+      menuButton.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("is-open");
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+      });
     </script>
   </body>
-
 </html>
