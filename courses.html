@@ -1,143 +1,395 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="image/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Introduction au traitement d'images avec OpenCV en C++ : lecture d'image, accès aux pixels, binarisation, filtres et convolution.">
+    <meta name="author" content="Mohamed Chelali">
+    <link rel="icon" href="image/favicon.png">
 
-    <title>Mohamed Chelali</title>
+    <title>Traitement d'images avec OpenCV | Mohamed Chelali</title>
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" >
-
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="css/jumbotron.css" >
-    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"-->
-
-
-      <link rel="stylesheet" href="css/style.css">
-
-    <!-- include font awosome package -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
-    
+    <link rel="stylesheet" href="css/profile-rd.css">
+    <script src="js/theme.js"></script>
   </head>
 
   <body>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="index.html">Mohamed Chelali</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a href="index.html#about">About</a>
+          <a href="index.html#research">Research</a>
+          <a href="index.html#publications">Publications</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#teaching">Teaching</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
 
-    
-    
+    <main class="page phd-page course-page">
+      <section class="phd-hero">
+        <p class="section-kicker">Cours | TD-TP</p>
+        <h1>Introduction au traitement d'images avec OpenCV</h1>
+        <div class="phd-meta">
+          <span>C++</span>
+          <span>OpenCV 4</span>
+          <span>4 TD-TP</span>
+        </div>
+        <p class="lead">
+          Le traitement d'images numériques est un domaine vaste, et les capteurs optiques produisent aujourd'hui
+          des volumes d'images considérables. L'objectif de ce cours est d'apprendre les bases du traitement d'images,
+          puis de les mettre en pratique dans un projet.
+        </p>
+        <div class="actions">
+          <a href="Cours/Test_Images.zip" class="green">Images de test</a>
+          <a href="Cours/ConfigOpenCV.pdf">Configurer OpenCV</a>
+        </div>
+      </section>
 
-    <div class="container" >
-      <br>
-      <center><img src="image/lincoln.png" ></center>
-      
-      <div>
-        <h3>Descritpion</h3><br>
-        
-        Le traitement d'image numérique est un domaine vaste et intéréssant. 
-        Acctuellement, la quantité de ce type de données a atteint un record incroyable  en vue de la vulgarisation des capteurs optique.  
-        Dans ce cours, l'objectif principal est de faire apprendre les bases du traitement d'images aux étudiants. 
-        Puis, cet apprentissage est utilisé pour réaliser un projet 
-      </div>
-      
-      <div>
-        <h3>Ressources</h3>
-        <ul>
-          <li><a href="Cours/Test_Images.zip">Images de test</a></li>
-          <li><a href="Cours/ConfigOpenCV.pdf">Configuration OpenCV</a></li>
-          <li><a href="Cours/TD1_21.pdf">TD-TP1</a></li>
-          <li><a href="Cours/TD2_21.pdf">TD-TP2</a></li>
-          <li><a href="Cours/TD3_21.pdf">TD-TP3</a></li>
-          <li><a href="Cours/TD4_21.pdf">TD-TP4</a></li>
+      <nav class="course-toc" aria-label="Sommaire">
+        <p class="section-kicker">Sommaire</p>
+        <ol>
+          <li><a href="#ressources">Ressources</a></li>
+          <li><a href="#bases">Bases d'OpenCV</a></li>
+          <li><a href="#lecture">Lecture d'une image</a></li>
+          <li><a href="#pixels">Accès aux pixels</a></li>
+          <li><a href="#binarisation">Binarisation</a></li>
+          <li><a href="#convolution">Filtres et convolution</a></li>
+          <li><a href="#astuces">Astuces</a></li>
+        </ol>
+      </nav>
+
+      <section class="section phd-text-section course-section" id="ressources">
+        <h2>Ressources</h2>
+        <ul class="resource-list">
+          <li><a href="Cours/Test_Images.zip">Images de test</a> <span>ZIP, 2,5 Mo</span></li>
+          <li><a href="Cours/ConfigOpenCV.pdf">Configuration d'OpenCV</a> <span>PDF</span></li>
+          <li><a href="Cours/TD1_21.pdf">TD-TP 1</a> <span>PDF</span></li>
+          <li><a href="Cours/TD2_21.pdf">TD-TP 2</a> <span>PDF</span></li>
+          <li><a href="Cours/TD3_21.pdf">TD-TP 3</a> <span>PDF</span></li>
+          <li><a href="Cours/TD4_21.pdf">TD-TP 4</a> <span>PDF</span></li>
         </ul>
-      </div>
-      
+      </section>
 
+      <section class="section phd-text-section course-section" id="bases">
+        <p class="section-kicker">Étape 0</p>
+        <h2>Bases d'OpenCV</h2>
+        <p>
+          Une image est stockée dans un objet <code>cv::Mat</code> : une matrice de pixels. Son type combine la
+          profondeur (nombre de bits et signe de chaque valeur) et le nombre de canaux (1 pour une image en niveaux
+          de gris, 3 pour une image couleur). Par exemple, <code>CV_8UC3</code> désigne 3 canaux d'entiers non
+          signés sur 8 bits, soit des valeurs de 0 à 255.
+        </p>
+        <p>Valeurs entières des types <code>cv::Mat</code> disponibles :</p>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr><th scope="col">Profondeur</th><th scope="col">C1</th><th scope="col">C2</th><th scope="col">C3</th><th scope="col">C4</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">CV_8U</th><td>0</td><td>8</td><td>16</td><td>24</td></tr>
+              <tr><th scope="row">CV_8S</th><td>1</td><td>9</td><td>17</td><td>25</td></tr>
+              <tr><th scope="row">CV_16U</th><td>2</td><td>10</td><td>18</td><td>26</td></tr>
+              <tr><th scope="row">CV_16S</th><td>3</td><td>11</td><td>19</td><td>27</td></tr>
+              <tr><th scope="row">CV_32S</th><td>4</td><td>12</td><td>20</td><td>28</td></tr>
+              <tr><th scope="row">CV_32F</th><td>5</td><td>13</td><td>21</td><td>29</td></tr>
+              <tr><th scope="row">CV_64F</th><td>6</td><td>14</td><td>22</td><td>30</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          La valeur se calcule ainsi : <code>type = profondeur + 8 × (canaux − 1)</code>. C'est l'entier renvoyé
+          par <code>img.type()</code>.
+        </p>
+      </section>
 
-      <div>
-        <h3>Bases de OpenCV</h3><br>
+      <section class="section phd-text-section course-section" id="lecture">
+        <p class="section-kicker">Étape 1</p>
+        <h2>Lecture et affichage d'une image</h2>
+        <p>
+          <code>cv::imread</code> charge une image depuis un fichier. Si le chemin est faux, la fonction ne lève pas
+          d'erreur : elle renvoie une matrice vide. Il faut donc <strong>toujours tester <code>empty()</code></strong>
+          avant d'utiliser l'image.
+        </p>
+<pre><code class="language-cpp">#include &lt;opencv2/opencv.hpp&gt;
+#include &lt;iostream&gt;
 
-        Listes des types de matrices <code class="lang-cpp">cv::Mat</code>  disponibles sur OpenCV<br>
-        <table>
-          <tr><td></td><td >C1</td><td >C2</td><td >C3</td><td>C4</td></tr>
-          <tr><td>CV_8U</td><td>0</td><td>8</td><td >16</td><td>24</td></tr>
-          <tr><td>CV_8S</td><td>1</td><td>9</td><td>17</td><td>25</td></tr>
-          <tr><td>CV_16U</td><td>2</td><td >10</td><td>18</td><td>26</td></tr>
-          <tr><td>CV_16S</td><td>3</td><td >11</td><td>19</td><td>27</td></tr>
-          <tr><td>CV_32S</td><td>4</td><td >12</td><td>20</td><td>28</td></tr>
-          <tr><td>CV_32F</td><td>5</td><td >13</td><td>21</td><td>29</td></tr>
-          <tr><td>CV_64F</td><td>6</td><td >14</td><td>22</td><td>30</td></tr>
-        </table>
-      </div>
+using namespace cv;
 
-        <br>
-      <div>
-        <h3>Astuces:</h3>
-        
-Creation d'une matrice inialiser à zeros de type T où T est un des types présenté précédements. Ce dernier peut être un entier (valeur de la case dans le tableau) ou le FLAG associer au type voulu. Par example: CV_8UC3 ou l'entier 16.
-<pre><code class="lang-cpp">Mat::zeros(nb_lignes, nb_cols, T)</code></pre>
+int main() {
+    Mat img = imread("Test_Images/lincoln.png", IMREAD_GRAYSCALE);
+    if (img.empty()) {
+        std::cerr &lt;&lt; "Impossible de lire l'image" &lt;&lt; std::endl;
+        return 1;
+    }
 
-Acceder à un pixel gris (dans le cas ou l'image est de type CV_8UC1).
-<pre><code class="lang-cpp">(int) img.at&lt;uchar&gt;(i,j)</code></pre>
+    std::cout &lt;&lt; "Taille : " &lt;&lt; img.rows &lt;&lt; " lignes x " &lt;&lt; img.cols &lt;&lt; " colonnes" &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Canaux : " &lt;&lt; img.channels() &lt;&lt; ", type : " &lt;&lt; img.type() &lt;&lt; std::endl;
 
-Acceder aux values d'un pixel couleur de type CV_8UC3. Utilisation du type Vec3b
-<pre><code class="lang-cpp">Vec3b intensity = img.at&lt;Vec3b&gt;(i,j)
-uchar blue = intensity.val[0];
-uchar green = intensity.val[1];
-uchar red = intensity.val[2];</code></pre>
+    imshow("Image", img);
+    waitKey(0);  // attend l'appui sur une touche
 
-Acceder aux values d'un pixel couleur de type CV_32FC3. Utilisation du type Vec3f
-<pre>
-<code class="lang-cpp">Vec3f intensity = img.at&lt;Vec3f&gt;(i,j);
-float blue = intensity.val[0];
-float green = intensity.val[1];
-float red = intensity.val[2];  </code></pre>
+    imwrite("copie.png", img);  // le format est déduit de l'extension
+    return 0;
+}</code></pre>
+        <p>Le second argument de <code>imread</code> fixe la façon dont l'image est chargée :</p>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr><th scope="col">Option</th><th scope="col">Résultat</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">IMREAD_COLOR</th><td>Couleur sur 3 canaux, dans l'ordre <strong>BGR</strong> (valeur par défaut)</td></tr>
+              <tr><th scope="row">IMREAD_GRAYSCALE</th><td>Niveaux de gris sur 1 canal (<code>CV_8UC1</code>)</td></tr>
+              <tr><th scope="row">IMREAD_UNCHANGED</th><td>Image telle quelle, canal alpha compris</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Pour compiler sous Linux ou macOS :</p>
+<pre><code class="language-bash">g++ main.cpp -o main $(pkg-config --cflags --libs opencv4)
+./main</code></pre>
+        <div class="exercise">
+          <p class="exercise-title">Exercice</p>
+          <p>
+            Chargez <code>veggies.png</code> en couleur, affichez sa taille et son nombre de canaux, puis
+            enregistrez sa version en niveaux de gris avec <code>cvtColor</code>.
+          </p>
+        </div>
+      </section>
 
-Remarque:
- OpenCV lit les images en BGR et non pas en RGB
+      <section class="section phd-text-section course-section" id="pixels">
+        <p class="section-kicker">Étape 2</p>
+        <h2>Accès aux pixels avec des coordonnées</h2>
+        <figure class="course-figure">
+          <img src="image/lincoln.png" alt="Portrait de Lincoln en basse résolution, avec la valeur de gris de chaque pixel" width="704" height="290" loading="lazy">
+          <figcaption>Une image en niveaux de gris n'est qu'une matrice de valeurs entre 0 (noir) et 255 (blanc).</figcaption>
+        </figure>
+        <p>
+          L'origine se trouve <strong>en haut à gauche</strong>. Un pixel est repéré par sa ligne <code>i</code>
+          (de 0 à <code>rows − 1</code>, vers le bas) et sa colonne <code>j</code> (de 0 à <code>cols − 1</code>,
+          vers la droite).
+        </p>
+        <div class="callout">
+          <p>
+            <strong>Piège classique :</strong> <code>img.at&lt;uchar&gt;(i, j)</code> prend <em>(ligne, colonne)</em>,
+            alors que <code>Point(x, y)</code> prend <em>(colonne, ligne)</em>. Autrement dit
+            <code>img.at&lt;uchar&gt;(i, j) == img.at&lt;uchar&gt;(Point(j, i))</code>.
+          </p>
+        </div>
+        <h3>Image en niveaux de gris (<code>CV_8UC1</code>)</h3>
+<pre><code class="language-cpp">uchar v = img.at&lt;uchar&gt;(10, 20);        // ligne 10, colonne 20
+img.at&lt;uchar&gt;(10, 20) = 255;             // le pixel devient blanc
+std::cout &lt;&lt; (int) v &lt;&lt; std::endl;       // cast en int, sinon uchar s'affiche comme un caractère</code></pre>
+        <h3>Image couleur (<code>CV_8UC3</code>)</h3>
+<pre><code class="language-cpp">Vec3b p = img.at&lt;Vec3b&gt;(i, j);
+uchar blue  = p[0];   // OpenCV range les canaux en BGR
+uchar green = p[1];
+uchar red   = p[2];
 
+img.at&lt;Vec3b&gt;(i, j) = Vec3b(0, 0, 255);  // pixel rouge</code></pre>
+        <h3>Parcourir toute l'image</h3>
+        <p>On parcourt les lignes, puis les colonnes. Exemple : le négatif d'une image.</p>
+<pre><code class="language-cpp">Mat negatif = img.clone();
+for (int i = 0; i &lt; img.rows; i++) {
+    for (int j = 0; j &lt; img.cols; j++) {
+        negatif.at&lt;uchar&gt;(i, j) = 255 - img.at&lt;uchar&gt;(i, j);
+    }
+}</code></pre>
+        <p>
+          Pour des images volumineuses, récupérer un pointeur sur chaque ligne évite de recalculer l'adresse
+          à chaque pixel :
+        </p>
+<pre><code class="language-cpp">for (int i = 0; i &lt; img.rows; i++) {
+    uchar* ligne = img.ptr&lt;uchar&gt;(i);
+    for (int j = 0; j &lt; img.cols; j++) {
+        ligne[j] = 255 - ligne[j];
+    }
+}</code></pre>
+        <div class="exercise">
+          <p class="exercise-title">Exercice</p>
+          <p>
+            Écrivez une fonction qui calcule l'histogramme d'une image en niveaux de gris (tableau de 256 cases),
+            puis une fonction qui dessine un carré blanc de 20 × 20 pixels centré dans l'image.
+          </p>
+        </div>
+      </section>
 
-Convertir une image couleur en image grise
-<pre><code class="lang-cpp">cvtColor(img_source, img_destination, cv::COLOR_BGR2GRAY);</code></pre>
+      <section class="section phd-text-section course-section" id="binarisation">
+        <p class="section-kicker">Étape 3</p>
+        <h2>Binarisation</h2>
+        <p>
+          Binariser une image, c'est séparer les pixels en deux classes (objet et fond) selon un seuil
+          <var>T</var>. Chaque pixel devient noir ou blanc :
+        </p>
+        <p class="formula">
+          g(i, j) = 255 si f(i, j) &gt; T, sinon 0
+        </p>
+        <h3>Seuillage manuel</h3>
+<pre><code class="language-cpp">Mat binariser(const Mat&amp; img, uchar seuil) {
+    Mat out(img.rows, img.cols, CV_8UC1);
+    for (int i = 0; i &lt; img.rows; i++) {
+        for (int j = 0; j &lt; img.cols; j++) {
+            out.at&lt;uchar&gt;(i, j) = img.at&lt;uchar&gt;(i, j) &gt; seuil ? 255 : 0;
+        }
+    }
+    return out;
+}</code></pre>
+        <h3>Avec OpenCV</h3>
+<pre><code class="language-cpp">Mat bin;
+threshold(img, bin, 128, 255, THRESH_BINARY);
 
-Convertir une image de type UINT8 au type FLOAT
-<pre><code class="lang-cpp">img_source.convertToimg_destination, CV_32F);</code></pre> 
-       
-</div>
-      
+// Otsu : le seuil est calculé automatiquement à partir de l'histogramme
+double t = threshold(img, bin, 0, 255, THRESH_BINARY | THRESH_OTSU);
+std::cout &lt;&lt; "Seuil d'Otsu : " &lt;&lt; t &lt;&lt; std::endl;
 
-      
+// Seuil adaptatif : un seuil local par voisinage de 11 x 11 pixels
+adaptiveThreshold(img, bin, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY, 11, 2);</code></pre>
+        <p>
+          Un seuil global échoue dès que l'éclairage n'est pas uniforme, ce qui est fréquent sur les photos
+          de documents. Le seuil adaptatif compare chaque pixel à la moyenne pondérée de son voisinage, moins
+          une constante (ici 2). La taille du voisinage doit être impaire.
+        </p>
+        <div class="exercise">
+          <p class="exercise-title">Exercice</p>
+          <p>
+            Binarisez <code>doc1.jpg</code> à <code>doc4.jpg</code> avec les trois méthodes et comparez les
+            résultats. Puis implémentez vous-même la méthode d'Otsu à partir de l'histogramme de l'étape 2.
+          </p>
+        </div>
+      </section>
 
+      <section class="section phd-text-section course-section" id="convolution">
+        <p class="section-kicker">Étape 4</p>
+        <h2>Filtres et convolution</h2>
+        <p>
+          Un filtre linéaire remplace chaque pixel par une combinaison pondérée de ses voisins. Les poids forment
+          un <strong>noyau</strong> <var>h</var>, une petite matrice de taille impaire (3 × 3, 5 × 5…). Cette
+          opération s'appelle la convolution :
+        </p>
+        <p class="formula">
+          g(i, j) = Σ<sub>u</sub> Σ<sub>v</sub> h(u, v) · f(i − u, j − v)
+        </p>
+        <h3>Noyaux classiques</h3>
+        <div class="kernel-grid">
+          <figure>
+            <table class="kernel"><tr><td>1</td><td>1</td><td>1</td></tr><tr><td>1</td><td>1</td><td>1</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table>
+            <figcaption><strong>Moyenne</strong> × 1/9 : lisse et réduit le bruit</figcaption>
+          </figure>
+          <figure>
+            <table class="kernel"><tr><td>1</td><td>2</td><td>1</td></tr><tr><td>2</td><td>4</td><td>2</td></tr><tr><td>1</td><td>2</td><td>1</td></tr></table>
+            <figcaption><strong>Gaussien</strong> × 1/16 : lissage qui préserve mieux les contours</figcaption>
+          </figure>
+          <figure>
+            <table class="kernel"><tr><td>−1</td><td>0</td><td>1</td></tr><tr><td>−2</td><td>0</td><td>2</td></tr><tr><td>−1</td><td>0</td><td>1</td></tr></table>
+            <figcaption><strong>Sobel X</strong> : contours verticaux</figcaption>
+          </figure>
+          <figure>
+            <table class="kernel"><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>−4</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr></table>
+            <figcaption><strong>Laplacien</strong> : contours dans toutes les directions</figcaption>
+          </figure>
+        </div>
+        <h3>Convolution manuelle</h3>
+        <p>
+          Le résultat peut sortir de l'intervalle [0, 255] (valeurs négatives avec Sobel, par exemple).
+          On calcule donc en <code>float</code> (<code>CV_32F</code>). Les bords, où le noyau dépasse de
+          l'image, sont laissés à 0 dans cette version.
+        </p>
+<pre><code class="language-cpp">Mat convolution(const Mat&amp; img, const Mat&amp; noyau) {
+    // img : CV_8UC1, noyau : CV_32F de taille impaire
+    int ri = noyau.rows / 2, rj = noyau.cols / 2;
+    Mat out = Mat::zeros(img.rows, img.cols, CV_32F);
 
-       
-    </div>
+    for (int i = ri; i &lt; img.rows - ri; i++) {
+        for (int j = rj; j &lt; img.cols - rj; j++) {
+            float somme = 0;
+            for (int u = -ri; u &lt;= ri; u++) {
+                for (int v = -rj; v &lt;= rj; v++) {
+                    somme += noyau.at&lt;float&gt;(ri + u, rj + v) * img.at&lt;uchar&gt;(i - u, j - v);
+                }
+            }
+            out.at&lt;float&gt;(i, j) = somme;
+        }
+    }
+    return out;
+}
 
+Mat moyenne = Mat::ones(3, 3, CV_32F) / 9.0f;
+Mat sobelX = (Mat_&lt;float&gt;(3, 3) &lt;&lt; -1, 0, 1,
+                                    -2, 0, 2,
+                                    -1, 0, 1);
 
-    
+Mat lisse, contours;
+convolution(img, moyenne).convertTo(lisse, CV_8U);  // arrondi et saturation dans [0, 255]
+convertScaleAbs(convolution(img, sobelX), contours); // valeur absolue puis conversion en 8 bits</code></pre>
+        <h3>Avec OpenCV</h3>
+<pre><code class="language-cpp">Mat out;
+filter2D(img, out, -1, noyau);           // -1 : même profondeur que l'image source
+blur(img, out, Size(3, 3));              // moyenne
+GaussianBlur(img, out, Size(5, 5), 1.5); // gaussien, écart-type 1.5
+medianBlur(img, out, 3);                 // médian (filtre non linéaire)
 
+Mat gx, gy;
+Sobel(img, gx, CV_16S, 1, 0, 3);         // dérivée selon x
+Sobel(img, gy, CV_16S, 0, 1, 3);         // dérivée selon y</code></pre>
+        <div class="callout">
+          <p>
+            <strong>À savoir :</strong> <code>filter2D</code> calcule en réalité une <em>corrélation</em> (le noyau
+            n'est pas retourné). Le résultat est identique pour les noyaux symétriques (moyenne, gaussien,
+            Laplacien). Pour Sobel, le signe est inversé : retournez le noyau avec <code>flip(noyau, noyau, -1)</code>
+            pour obtenir une vraie convolution.
+          </p>
+        </div>
+        <div class="exercise">
+          <p class="exercise-title">Exercice</p>
+          <p>
+            Sur <code>fountainSaltPepper.png</code>, comparez le filtre moyenne et le filtre médian : lequel supprime
+            le bruit « poivre et sel » sans flouter les contours ? Puis calculez la norme du gradient
+            √(gx² + gy²) avec vos deux noyaux de Sobel et binarisez-la pour obtenir une carte de contours.
+          </p>
+        </div>
+      </section>
 
+      <section class="section phd-text-section course-section" id="astuces">
+        <h2>Astuces</h2>
+        <p>
+          Créer une matrice initialisée à zéro de type <code>T</code>. <code>T</code> peut être le nom du type
+          (<code>CV_8UC3</code>) ou sa valeur entière (<code>16</code>) :
+        </p>
+<pre><code class="language-cpp">Mat m = Mat::zeros(nb_lignes, nb_colonnes, T);</code></pre>
+        <p>Accéder à un pixel couleur d'une image en <code>CV_32FC3</code> avec le type <code>Vec3f</code> :</p>
+<pre><code class="language-cpp">Vec3f p = img.at&lt;Vec3f&gt;(i, j);
+float blue  = p[0];
+float green = p[1];
+float red   = p[2];</code></pre>
+        <p>Convertir une image couleur en niveaux de gris (attention à l'ordre BGR) :</p>
+<pre><code class="language-cpp">cvtColor(img_source, img_destination, COLOR_BGR2GRAY);</code></pre>
+        <p>Convertir une image 8 bits en <code>float</code>, avec ou sans normalisation dans [0, 1] :</p>
+<pre><code class="language-cpp">img_source.convertTo(img_destination, CV_32F);
+img_source.convertTo(img_destination, CV_32F, 1.0 / 255);</code></pre>
+      </section>
+    </main>
 
-    <footer class="container">
-    	<hr>
-      <p>&copy; Mohamed Chelali</p>
+    <footer class="footer">
+      <p>Mohamed Chelali</p>
     </footer>
 
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <!--script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script-->
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-    
-    
-
-      <!-- include HIGHLIGH_JS  -->
-      <link rel="stylesheet" href="highlight/prism.css">
     <script src="highlight/prism.js"></script>
+    <script>
+      const menuButton = document.querySelector(".menu-button");
+      const navLinks = document.querySelector(".nav-links");
+      menuButton.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("is-open");
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+      });
+    </script>
   </body>
 </html>
